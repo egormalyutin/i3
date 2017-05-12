@@ -110,5 +110,6 @@ c_dilemma_start() {
 
 	c_dilemma_reserve
 
+	c_dilemma_start
 
 # </RUN>
