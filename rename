@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# Задаём папку с конфигами
+
+I3_CONFIG="~/.config/i3/"
+
+# Задаём пути к программам для переиминования
+
+RENAME="$I3_CONFIG/i3-rename-workspace"
+RENUM="$I3_CONFIG/i3-renumber-workspace"
+WORKSPACER="$I3_CONFIG/i3-workspacer.py"
+
+# Переиминовываем воркспейс
+
+if [[ $1 ]]
+then
+	eval $WORKSPACER rename -na $1 >> /dev/null
+else
+	eval $RENAME >> /dev/null
+fi
+
+# Изменяем номер воркспейса
+
+if [[ $2 ]]
+then
+	eval $WORKSPACER rename -nu $2 >> /dev/null
+else
+	eval $RENUM >> /dev/null
+fi
+

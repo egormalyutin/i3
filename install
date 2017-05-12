@@ -1,0 +1,115 @@
+# EgorCod.TK's i3wm config installer 1.0
+
+# <USEFUL FUNCTIONS>
+
+dilemma() {
+	read -p "$1 " -r
+	if [[ $REPLY =~ ^[Yy]$ ]]
+	then
+		return 1
+	else
+		return 0
+	fi
+		
+		
+}
+
+# </USEFUL FUNCTIONS>
+
+# <DEFS>
+
+	CONFIG_DIR=~/.config/i3
+
+# </DEFS>
+
+# <COMPONENTS>
+
+c_welcome() {
+	# Echo welcome message and packages need for install list 
+	echo
+
+	echo "Welcome for my i3-gaps configs installer!"
+	echo
+	echo "You need to install this packages:"
+	echo "- i3-gaps;"
+	echo "- i3blocks;"
+	echo "- feh;"
+	echo "- dmenu."
+
+	echo
+
+	echo "Also, you need install this fonts:"
+	echo "- Droid Sans; (not important)"
+	echo "- Font Awesome."
+	
+	echo
+
+	echo "All of packages in one string:"
+	echo "- i3-gaps i3blocks feh dmenu"
+	echo "And commands for install fonts: (for Arch Linux, and you need for install yaourt)"
+	echo "- sudo pacman -S ttf-droid"
+	echo "- yaourt ttf-font-awesome"
+	
+	echo
+}
+
+c_install_please() {
+	echo "Install them all and return, please."
+	exit 1	
+}
+
+c_dilemma_installed() {
+	dilemma "Was you installed them all? [Y/n]"
+}
+
+c_dilemma_config_dir() {
+	dilemma "Want you change default configs directory? (default - $CONFIG_DIR) 
+[Y/n]"
+	if [[ $? == 1 ]]
+	then
+		read -p "Your config directory: "
+		CONFIG_DIR=$REPLY
+		echo "Config directory was succefully changed to $CONFIG_DIR."
+	fi
+}
+
+c_dilemma_reserve() {
+	dilemma "Want you take reserve copy of your last config? [Y/n]"
+	if [[ $? == 1 ]]
+	then
+		mkdir $CONFIG_DIR/old-reserve-copy
+		mv -r $CONFIG_DIR/* $CONFIG_DIR/old-reserve-copy
+		echo "Reserve copy was succefully created in $CONFIG_DIR/old-reserve-copy"	
+	fi
+}
+
+
+
+
+# </COMPONENTS>
+
+
+# <RUN>
+
+	c_welcome
+
+
+	c_dilemma_installed
+
+	if [[ $? == 1 ]]
+	then
+		echo
+	else
+		c_install_please 
+	fi
+
+	
+	if  [ -d ~/.config/i3 ]
+	then
+		c_dilemma_config_dir
+	fi
+
+	c_dilemma_reserve
+
+
+# </RUN>
