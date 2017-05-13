@@ -2,9 +2,12 @@
 
 # Tab-name aliases config
 
+#!/bin/bash
+
 alias tab-name="~/.config/i3/rename"
-alias tab-name-browser="tab-name "
-alias tab-name-term="tab-name "   
-alias tab-name-torrent="tab-name " 
-alias tab-name-music="tab-name "
+alias tab-rename="~/.config/i3/i3-workspacer.py rename -na"
+alias tab-name-browser="tab-rename "
+alias tab-name-term="tab-rename "   
+alias tab-name-torrent="tab-rename " 
+alias tab-name-music="tab-rename "
 alias tab-name-cheat="firefox ~/.config/i3/icons-cheat.html"
