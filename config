@@ -6,20 +6,26 @@
 #
 
 # !
-# <DEFAULTS>
+# <PREFERENCES>
 # Change they for your preferences!
 
-set $innerGaps 10 # Inner gaps in i3-gaps.
-set $outerGaps 0 # Outer gaps in i3-gaps.
+# Inner gaps in i3-gaps.
+set $innerGaps 10
+ 
+# Outer gaps in i3-gaps.
+set $outerGaps 0
+ 
+# Command for start your browser. It opens if you press $mod+b
+set $browser luakit 
 
-set $browser luakit # Command for start your browser. It opens if you press $mod+b
-
-set $wallpaper ~/.config/i3/wallpaper.png  # Path to your wallpaper. 
-
-set $mod Mod4 # Your mod key.
+# Path to your wallpaper.
+set $wallpaper ~/.config/i3/wallpaper.png
+ 
+# Your mod key.
+set $mod Mod4 
 
 # Change they for your preferences!
-# </DEFAULTS>
+# </PREFERENCES>
 # !
 
 # i3 config file (v4)
