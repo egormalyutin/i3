@@ -1,4 +1,4 @@
-# i3
+#i3
 
 ### My configs for i3gaps.
 
@@ -18,10 +18,10 @@
 ## Features list
 
 * Rename workspace tools:
+
   1. If you press Mod+n, will show rename and renumber window.
   2. If you start `tab-name-term` in terminal, workspace will be named with shell icon. There is another icons. Aliases list is in ~/.config/i3/tab-name. Also, there is all icons in ~/.config/i3/icons-cheat.html. You can run `tab-name-cheat` to view it in firefox.
-* Change volume by FN+F11 and FN+F12.
-* Change brightness by FN+F5 and FN+F6.
+
 * Included my wallpaper :D
 * Preferences section in config file.
 * Transparent status bar.
