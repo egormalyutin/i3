@@ -4,6 +4,14 @@ color=#666666
 separator=false
 separator_block_width=3
 
+[music]
+label=
+command=cat ~/cmus-status.txt
+interval=10
+color=#FFFFFF
+
+[separator]
+
 [CPU]
 label=
 command=~/.config/i3/scripts/cpu_usage
