@@ -261,6 +261,9 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 6
 exec compton -f --vsync drm
 exec feh --bg-scale $wallpaper &
 
+# Key bind for fix wallpapers on another monitors
+bindsym $mod+Shift+w exec feh --bg-scale $wallpaper &
+
 # Show/Hide names
 
 bindsym $mod+T border toggle
