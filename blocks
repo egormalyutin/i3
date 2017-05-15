@@ -4,10 +4,22 @@ color=#666666
 separator=false
 separator_block_width=3
 
+
+
+
+
+
 [music]
 label=
 command=cat ~/cmus-status.txt
 interval=10
+color=#FFFFFF
+
+[separator]
+
+[remote]
+command=remote-sym-status
+interval=5
 color=#FFFFFF
 
 [separator]

@@ -241,7 +241,7 @@ client.background       $transparent
 
 # Volume
 
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% 
 
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%
 
@@ -269,10 +269,23 @@ bindsym $mod+Shift+m exec xrandr --output eDP1 --mode 1366x768 --pos 0x0 --outpu
 
 bindsym $mod+T border toggle
 
-# i3-gaps
+# Set default gaps
 
 gaps inner $innerGaps
 gaps outer $outerGaps
 
-# Mount and umount all devices to /mnt
-bindsym $mod+m exec ~/.config/i3/mount
+# Set keys to change gaps
+
+bindsym $mod+o        gaps outer current plus  5
+bindsym $mod+Shift+o  gaps outer current minus 5
+
+bindsym $mod+i        gaps inner current plus  5
+bindsym $mod+Shift+i  gaps inner current minus 5
+
+# Set gaps to default
+
+bindsym $mod+Shift+d gaps inner all set $innerGaps
+
+
+# Toggle remote daemon
+bindsym $mod+u exec remote-toggle
