@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Script for mount all devices to /mnt.
+
+cd /dev/
+
+devices=$(ls -1 | grep sd(.).*)
+
+for device in $devices
+do
+	echo $device
+done

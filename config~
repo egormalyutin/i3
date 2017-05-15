@@ -262,17 +262,14 @@ exec compton -f --vsync drm
 exec feh --bg-scale $wallpaper &
 
 # Key bind for fix wallpapers on another monitors
-# WARNING: It's only for my monitor!
-bindsym $mod+Shift+m exec xrandr --output eDP1 --mode 1366x768 --pos 0x0 --output DP1 --mode 1024x768 --pos 1366x0 && feh --bg-scale $wallpaper &
+bindsym $mod+Shift+w exec feh --bg-scale $wallpaper &
 
 # Show/Hide names
 
 bindsym $mod+T border toggle
 
-# i3-gaps
+# i3gaps
 
 gaps inner $innerGaps
 gaps outer $outerGaps
 
-# Mount and umount all devices to /mnt
-bindsym $mod+m exec ~/.config/i3/mount
