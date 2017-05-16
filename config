@@ -305,6 +305,5 @@ bindsym $mod+u exec remote-toggle
 # Toggle split
 bindsym $mod+Shift+t split toggle
 
-# Mount devices
-bindsym $mod+Shift+d exec ~/.config/i3/mount 
-bindsym $mod+Shift+u exec ~/.config/i3/unmount
+# Rename this workspace by ~/.config/i3/i3-symb and ~/.config/i3/tab-name.js
+bindsym $mod+shift+n exec ~/.config/i3/i3-symb

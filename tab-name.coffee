@@ -1,36 +1,43 @@
+do ->
 
-#!/usr/bin/env node
+	program = require "commander"
 
-class
+	program
+		.version '0.0.1'
+		.option '-s, --symbol [symbol]', 'name of symbol'
+		.parse process.argv
 
-alias tab-name="~/.config/i3/rename"
-alias tab-rename="~/.config/i3/i3-workspacer.py rename -na"
+	childProcess = require "child_process"
 
-alias tab-name-browser="tab-rename "
-tab_name_browser="tab-rename "
+	exec = childProcess.exec
+	ex = module.exports
 
-alias tab-name-term="tab-rename "   
-tab_name_term="tab-rename "   
+	log = console.log
+	
+	ex.toTable = (str) ->
+		m = str.split "; "
+		m3 = []
+		for m2 in m
+			t = m2.split ": "
+			m3[t[0]] = t[1]
+		return m3
+	
+	ex.table = ex.toTable "browser: ; 
+			       term: ; 
+			       torrent: ; 
+			       paint: ; 
+			       music: ; 
+			       files: ; 
+			       word: ; 
+			       powerpoint: ; 
+			       letter: "
 
-alias tab-name-torrent="tab-rename "
-tab_name_torrent="tab-rename "
+	ex.rename = (name) ->
+		exec (__dirname + "/i3-workspacer.py rename -na " + ex.table[name])
 
-alias tab-name-paint="tab-rename "
-tab_name_paint="tab-rename "
+	# Binary
+	do ->
+		if program.symbol
+			ex.rename program.symbol
+			log "Symbol of workspace was changed to " + ex.table[program.symbol]
 
-alias tab-name-music="tab-rename "
-tab_name_music="tab-rename "
-
-alias tab-name-files="tab-rename "
-tab_name_files="tab-rename "
-
-alias tab-name-word="tab-rename "
-tab_name_word="tab-rename "
-
-alias tab-name-powerpoint="tab-rename "
-tab_name_powerpoint="tab-rename "
-
-alias tab-name-letter "tab-rename "
-tab_name_letter="tab-rename "
-
-alias tab-name-cheat="firefox ~/.config/i3/icons-cheat.html"
