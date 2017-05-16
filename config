@@ -5,6 +5,12 @@
 # this file and re-run i3-config-wizard(1).
 #
 
+
+for_window [class="^.*"] border pixel 0
+
+for_window [window_role="gimp-dock"] floating disable; move left; resize shrink width 50 px or 50ppt
+for_window [window_role="gimp-toolbox"] floating disable; move right; resize grow width 30 px or 30ppt
+
 # !
 # <PREFERENCES>
 # Change they for your preferences!
@@ -84,10 +90,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+colon move right
+#bindsym $mod+Shift+j move left
+#bindsym $mod+Shift+k move down
+#bindsym $mod+Shift+l move up
+#bindsym $mod+Shift+colo
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -276,16 +282,29 @@ gaps outer $outerGaps
 
 # Set keys to change gaps
 
-bindsym $mod+o        gaps outer current plus  5
-bindsym $mod+Shift+o  gaps outer current minus 5
+bindsym $mod+o        gaps outer current plus  10
+bindsym $mod+Shift+o  gaps outer current minus 10
 
-bindsym $mod+i        gaps inner current plus  5
-bindsym $mod+Shift+i  gaps inner current minus 5
+bindsym $mod+i        gaps inner current plus  10
+bindsym $mod+Shift+i  gaps inner current minus 10
+
+# Set keys to move windows 
+
+bindsym $mod+Shift+h    move left 30
+bindsym $mod+Shift+j    move down 30
+bindsym $mod+Shift+k    move up 30
+bindsym $mod+Shift+l    move right 30
 
 # Set gaps to default
 
-bindsym $mod+Shift+d gaps inner all set $innerGaps
-
+bindsym $mod+Shift+g  gaps inner all set $innerGaps; gaps outer all set $outerGaps
 
 # Toggle remote daemon
 bindsym $mod+u exec remote-toggle
+
+# Toggle split
+bindsym $mod+Shift+t split toggle
+
+# Mount devices
+bindsym $mod+Shift+d exec ~/.config/i3/mount 
+bindsym $mod+Shift+u exec ~/.config/i3/unmount

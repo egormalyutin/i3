@@ -1,8 +1,8 @@
+
 #!/usr/bin/env node
 
-# Tab-name aliases config
+class
 
-#!/bin/bash
 alias tab-name="~/.config/i3/rename"
 alias tab-rename="~/.config/i3/i3-workspacer.py rename -na"
 

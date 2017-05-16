@@ -1,12 +1,17 @@
-#!/bin/bash
+#/bin/bash
 
-# Script for mount all devices to /mnt.
+alias mkdir="echo 'egorka&gorka' | sudo -S mkdir"
+alias mount="echo 'egorla&gorka' | sudo -S mount"
 
 cd /dev/
 
-devices=$(ls -1 | grep sd(.).*)
+for device in sd*
+	do
+		if [[ $(ls -l /dev/disk/by-uuid/ | grep $device | grep 7CE2-470C) ]]
+		then
+        		sudo mkdir /mnt/flash
+        		sudo mount $device /mnt/flash
+        		echo "Mounted $device to /mnt/flash."
+		fi
 
-for device in $devices
-do
-	echo $device
 done
