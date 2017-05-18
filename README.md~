@@ -2,19 +2,6 @@
 
 ### My configs for i3gaps.
 
-## What's new?
-
-* You can remote cmus now:
-
-  1. Press Mod+Shift+C;
-  2. Press n or right for play next track;
-  3. Press u or left for player previous track;
-  4. Press space for toggle pause;
-  5. Press r for toggle repeat current track;
-  6. You can see the music status at bar.
-
-* Renaming by icons: If you press Mod+Shift+n, will show rename by icon number. You can view all icons at ~/.config/i3/tab-name.js.
-
 ## Screenshot
 
 ![Screenshot](https://raw.githubusercontent.com/malyutinegor/i3/master/screen.png "Screenshot")

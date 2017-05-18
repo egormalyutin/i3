@@ -30,7 +30,7 @@ tab_name_word="tab-rename "
 alias tab-name-powerpoint="tab-rename "
 tab_name_powerpoint="tab-rename "
 
-alias tab-name-letter "tab-rename "
+alias tab-name-letter="tab-rename "
 tab_name_letter="tab-rename "
 
 alias tab-name-cheat="firefox ~/.config/i3/icons-cheat.html"

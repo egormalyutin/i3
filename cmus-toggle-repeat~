@@ -1,0 +1,9 @@
+#!/bin/bash
+
+repeating=$(cmus-remote -Q | grep 'repeat_current true')
+
+if [[ $repeating ]]
+then
+	
+else
+fi

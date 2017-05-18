@@ -1,0 +1,10 @@
+#!/bin/bash
+
+repeating=$(cmus-remote -Q | grep 'repeat_current true')
+
+if [[ $repeating ]]
+then
+	cmus-remote -C "set repeat_current=false"
+else
+	cmus-remote -C "set repeat_current=true"
+fi
