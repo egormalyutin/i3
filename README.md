@@ -14,10 +14,13 @@
   6. You can see the music status at bar.
 
 * Renaming by icons: If you press Mod+Shift+n, will show rename by icon number. You can view all icons at ~/.config/i3/tab-name.js.
+* You can take a screenshot by pressing Mod+S. All screenshots saves at ~/Screenshots/ defaultly.
 
 ## Screenshot
 
 ![Screenshot](https://raw.githubusercontent.com/malyutinegor/i3/master/screen.png "Screenshot")
+
+### If you going to install my configs, please, read all this readme!
 
 ## Dependencies
 
@@ -56,6 +59,8 @@
   4. Press space for toggle pause;
   5. Press r for toggle repeat current track;
   6. You can see the music status at bar.
+
+* You can take a screenshot by pressing Mod+S. All screenshots saves at ~/Screenshots/ defaultly.
 
 ## Installaton
 

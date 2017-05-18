@@ -14,6 +14,7 @@
   6. You can see the music status at bar.
 
 * Renaming by icons: If you press Mod+Shift+n, will show rename by icon number. You can view all icons at ~/.config/i3/tab-name.js.
+* You can take a screenshot by pressing Mod+S. All screenshots saves at ~/Screenshots/ defaultly.
 
 ## Screenshot
 
@@ -57,14 +58,16 @@
   5. Press r for toggle repeat current track;
   6. You can see the music status at bar.
 
+* You can take a screenshot by pressing Mod+S. All screenshots saves at ~/Screenshots/ defaultly.
+
 ## Installaton
 
 ### Installing dependencies
 
-Installing in Arch Linux (need yaourt):
+Installing on Arch Linux (need yaourt):
 
 ```
-yaourt i3-gaps i3blocks feh compton python pulseaudio cmus ttf-font-awesome 
+yaourt i3-gaps i3blocks feh compton nodejs python pulseaudio cmus ttf-font-awesome 
 ```
 
 ### Installing configs

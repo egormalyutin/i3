@@ -232,7 +232,7 @@ mode "cmus" {
 	bindsym u     exec cmus-remote -r
 
 	bindsym space exec cmus-remote -u
-	bindsym space exec cmus-remote -u
+	bindsym p     exec cmus-remote -u
 
 	bindsym r     exec ~/.config/i3/cmus-toggle-repeat
 
