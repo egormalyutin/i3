@@ -61,10 +61,10 @@
 
 ### Installing dependencies
 
-Installing in Arch Linux (need yaourt):
+Installing on Arch Linux (need yaourt):
 
 ```
-yaourt i3-gaps i3blocks feh compton python pulseaudio cmus ttf-font-awesome 
+yaourt i3-gaps i3blocks feh compton nodejs python pulseaudio cmus ttf-font-awesome 
 ```
 
 ### Installing configs
