@@ -18,7 +18,7 @@
     }
     return m3;
   };
-  ex.table = ex.toTable("browser: ; term: ; torrent: ; paint: ; music: ; files: ; word: ; powerpoint: ; letter: ");
+  ex.table = ex.toTable("browser: ; term: ; torrent: ; paint: ; music: ; files: ; word: ; powerpoint: ; letter: ; messages: ; messenger: ; mess:  ; lock: ; secure: ; develop: ; devel: ; dev: ; gaming: ; game: ;");
   ex.rename = function(name) {
     return exec(__dirname + "/i3-workspacer.py rename -na " + ex.table[name]);
   };

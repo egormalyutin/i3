@@ -30,12 +30,23 @@ do ->
 			       files: ; 
 			       word: ; 
 			       powerpoint: ; 
-			       letter: "
+			       letter: ;
+			       messages: ;
+			       messenger: ;
+			       mess:  ;
+			       lock: ;
+			       secure: ;
+			       develop: ;
+			       devel: ;
+			       dev: ;
+			       "
 
 	ex.rename = (name) ->
 		exec (__dirname + "/i3-workspacer.py rename -na " + ex.table[name])
 
 	# Binary
 	do ->
-		if program.symbol then log program.symbol
+		if program.symbol
+			ex.rename program.symbol
+			log "Symbol of workspace was changed to " + ex.table[program.symbol]
 

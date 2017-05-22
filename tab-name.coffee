@@ -30,7 +30,18 @@ do ->
 			       files: ; 
 			       word: ; 
 			       powerpoint: ; 
-			       letter: "
+			       letter: ;
+			       messages: ;
+			       messenger: ;
+			       mess:  ;
+			       lock: ;
+			       secure: ;
+			       develop: ;
+			       devel: ;
+			       dev: ;
+			       gaming: ;
+			       game: ;
+			       "
 
 	ex.rename = (name) ->
 		exec (__dirname + "/i3-workspacer.py rename -na " + ex.table[name])
