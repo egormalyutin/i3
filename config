@@ -228,20 +228,26 @@ mode "cmus" {
         
 	# remote keys
 	
-	bindsym Right exec cmus-remote -n
-	bindsym n     exec cmus-remote -n
+	bindsym Right	exec cmus-remote -n
+	bindsym n	exec cmus-remote -n
 
-	bindsym Left  exec cmus-remote -r
-	bindsym u     exec cmus-remote -r
+	bindsym Left	exec cmus-remote -r
+	bindsym u	exec cmus-remote -r
 
-	bindsym space exec cmus-remote -u
-	bindsym p     exec cmus-remote -u
+	bindsym space	exec cmus-remote -u
+	bindsym p	exec cmus-remote -u
 
-	bindsym Up    exec pactl set-sink-volume 0 +5% 
+	bindsym Up	exec pactl set-sink-volume 0 +5% 
 
-	bindsym Down  exec pactl set-sink-volume 0 -5%
+	bindsym Down	exec pactl set-sink-volume 0 -5%
 
-	bindsym r     exec ~/.config/i3/cmus-toggle-repeat
+	bindsym r	exec ~/.config/i3/cmus-toggle-repeat
+
+	bindsym a	exec cmus-remote -C "seek -5"
+	bindsym h	exec cmus-remote -C "seek -5"
+
+	bindsym d	exec cmus-remote -C "seek +5"
+	bindsym l	exec cmus-remote -C "seek +5"
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"

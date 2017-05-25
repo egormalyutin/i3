@@ -22,25 +22,121 @@ do ->
 			m3[t[0]] = t[1]
 		return m3
 	
-	ex.table = ex.toTable "browser: ; 
+	ex.table = ex.toTable "browser: ;
+			       web: ;
+			       net: ;
+
+			       terminal: ; 
 			       term: ; 
+			       shell: ; 
+
+			       images: ;
+
 			       torrent: ; 
+
 			       paint: ; 
+
 			       music: ; 
+
 			       files: ; 
+
 			       word: ; 
+
 			       powerpoint: ; 
+
 			       letter: ;
-			       messages: ;
-			       messenger: ;
-			       mess:  ;
+
 			       lock: ;
 			       secure: ;
+			       sec: ;
+
 			       develop: ;
 			       devel: ;
 			       dev: ;
+
 			       gaming: ;
 			       game: ;
+
+			       vkontakte: ;
+			       vk: ;
+
+			       youtube: ;
+			       yt: ;
+
+			       fix: ;
+
+			       git: ;
+
+			       github: ;
+
+			       linux: ;
+
+			       phone: ;
+
+			       book: ;
+			       manual: ;
+			       man: ;
+
+			       server: ;
+			       serv: ;
+
+			       film: ;
+
+			       save: ;
+
+			       settings: ;
+
+			       telegram: ;
+
+			       math: ;
+			       maths: ;
+
+			       upload: ;
+
+			       usb: ;
+			       
+			       user: ;
+
+			       camera: ;
+
+			       check: ;
+			       checked: ;
+
+			       code: ;
+
+			       fork: ;
+
+			       dropbox: ;
+
+			       warning: ;
+			       warn: ;
+
+			       watch: ;
+
+			       flag: ;
+
+			       wifi: ;
+			       wireless: ;
+
+			       keys: ;
+			       keyboard: ;
+
+			       map: ;
+
+			       microphone: ;
+			       phone: ;
+
+			       qrcode: ;
+			       qr: ;
+
+			       question: ;
+
+			       info: ;
+			       information: ;
+
+			       star: ;
+
+			       record: ;
 			       "
 
 	ex.rename = (name) ->

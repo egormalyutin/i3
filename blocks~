@@ -8,7 +8,7 @@ separator_block_width=3
 
 [music]
 label= 
-command=cat ~/cmus-status.txt
+command=if ! [[ $(cmus-remote -Q | grep "status ") ]]cat ~/cmus-status.txt
 interval=5
 color=#FFFFFF
 
