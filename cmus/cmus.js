@@ -18,7 +18,7 @@ remote.status(function(status) {
     if (status.status === 'paused') {
       str += '  ';
     }
-    if (status.settings.repeat_current) {
+    if (status.settings.repeat_current === "true") {
       str += '  ';
     }
     log(str);

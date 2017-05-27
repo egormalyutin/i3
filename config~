@@ -241,7 +241,7 @@ mode "cmus" {
 
 	bindsym Down	exec pactl set-sink-volume 0 -5%
 
-	bindsym r	exec $c/cmus/cmus-toggle-repeat
+	bindsym r	exec $c/cmus-toggle-repeat
 
 	bindsym a	exec cmus-remote -C "seek -5"
 	bindsym h	exec cmus-remote -C "seek -5"
