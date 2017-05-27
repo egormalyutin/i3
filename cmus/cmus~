@@ -1,9 +1,0 @@
-#!/bin/bash
-
-c=$(cmus-remote -Q)
-
-if [[ $c == "" ]]
-then
-	echo
-else
-	node ./cmus.js
