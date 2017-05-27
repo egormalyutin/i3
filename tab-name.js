@@ -18,7 +18,7 @@
     }
     return m3;
   };
-  ex.table = ex.toTable("browser: ; web: ; net: ; term: ; images: ; torrent: ; paint: ; music: ; files: ; word: ; powerpoint: ; letter: ; lock: ; secure: ; sec: ; develop: ; devel: ; dev: ; gaming: ; game: ; vkontakte: ; vk: ; youtube: ; yt: ; fix: ; git: ; github: ; linux: ; phone: ; book: ; manual: ; man: ; server: ; serv: ; film: ; save: ; settings: ; telegram: ; math: ; maths: ; upload: ; usb: ; user: ; camera: ; check: ; checked: ; code: ; fork: ; dropbox: ; warning: ; warn: ; watch: ; flag: ; wifi: ; wireless: ; keys: ; keyboard: ; map: ; microphone: ; phone: ; qrcode: ; qr: ; question: ; info: ; information: ; star: ; record: ;");
+  ex.table = ex.toTable("browser: ; web: ; net: ; terminal: ; term: ; shell: ; images: ; torrent: ; paint: ; music: ; files: ; word: ; powerpoint: ; letter: ; lock: ; secure: ; sec: ; develop: ; devel: ; dev: ; gaming: ; game: ; vkontakte: ; vk: ; youtube: ; yt: ; fix: ; git: ; github: ; linux: ; phone: ; book: ; manual: ; man: ; server: ; serv: ; film: ; save: ; settings: ; telegram: ; math: ; maths: ; upload: ; usb: ; user: ; camera: ; check: ; checked: ; code: ; fork: ; dropbox: ; warning: ; warn: ; watch: ; flag: ; wifi: ; wireless: ; keys: ; keyboard: ; map: ; microphone: ; phone: ; qrcode: ; qr: ; question: ; info: ; information: ; star: ; record: ; magic: ; write: ; pen: ;");
   ex.rename = function(name) {
     return exec(__dirname + "/i3-workspacer.py rename -na " + ex.table[name]);
   };

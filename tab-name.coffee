@@ -137,6 +137,11 @@ do ->
 			       star: ;
 
 			       record: ;
+
+			       magic: ;
+
+			       write: ;
+			       pen: ;
 			       "
 
 	ex.rename = (name) ->

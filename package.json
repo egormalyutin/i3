@@ -1,0 +1,22 @@
+{
+  "name": "i3-egorcod-configs",
+  "version": "1.0.0",
+  "description": "My configs for i3gaps",
+  "main": " ",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/malyutinegor/i3.git"
+  },
+  "author": "egorgl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/malyutinegor/i3/issues"
+  },
+  "homepage": "https://github.com/malyutinegor/i3#readme",
+  "dependencies": {
+    "cmus-remote-node": "0.1.0"
+  }
+}

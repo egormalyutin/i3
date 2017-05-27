@@ -1,2 +1,0 @@
-#!/bin/bash
-i3-input -f "-*-ubuntu-bold-r-*-*-26-*-*-*-*-*-*-*" -F "exec --no-startup-id node ~/.config/i3/tab-name.js" -P 'Rename by symbol: '

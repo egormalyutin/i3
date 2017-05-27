@@ -4,17 +4,7 @@
 
 ## What's new?
 
-* You can remote cmus now:
-
-  1. Press Mod+Shift+C;
-  2. Press n or right for play next track;
-  3. Press u or left for player previous track;
-  4. Press space for toggle pause;
-  5. Press r for toggle repeat current track;
-  6. You can see the music status at bar.
-
-* Renaming by icons: If you press Mod+Shift+n, will show rename by icon number. You can view all icons at ~/.config/i3/tab-name.js.
-* You can take a screenshot by pressing Mod+S. All screenshots saves at ~/Screenshots/ defaultly.
+* New cmus status: not needs installation and not displays last song if you close terminal window!
 
 ## Screenshot
 
@@ -55,10 +45,13 @@
 
   1. Press Mod+Shift+C;
   2. Press n or right for play next track;
-  3. Press u or left for player previous track;
+  3. Press u or left for play previous track;
   4. Press space for toggle pause;
   5. Press r for toggle repeat current track;
-  6. You can see the music status at bar.
+  6. Press a for rewind music 5 seconds backward;
+  7. Press d for rewind music 5 seconds forward;
+  8. You can see the music status at bar.
+
 
 * You can take a screenshot by pressing Mod+S. All screenshots saves at ~/Screenshots/ defaultly.
 
@@ -72,33 +65,25 @@ Installing on Arch Linux (need yaourt):
 yaourt i3-gaps i3blocks feh compton nodejs python pulseaudio cmus ttf-font-awesome 
 ```
 
+If you have other linux distro, you need install they by yourself.
+
 ### Installing configs
 
-For install my configs, you need create backup of your last config, copy my config to ~/.config/i3, and add helpful alias to ~/.bashrc:
+For install my configs, you need create backup of your last config and copy my config to ~/.config/i3:
 
-```
+```bash
 cd ~/.config
 sudp mv i3 i3-old
 sudo git clone https://github.com/malyutinegor/i3.git
-echo "source ~/.config/i3/tab-name" >> ~/.bashrc
-sudo vim ~/.config/i3/config
 ```
 
-If you need working cmus status, you must run this command in cmus shell:
+You also need for view ~/.config/i3/config for view config and edit "prefereneces" section:
 
-```
-:set status_display_program=~/.config/i3/cmus 
-``` 
-
-And add helpful alias to ~/.bashrc:
-
-```
-echo 'alias cmus="cmus && ~/.config/i3/cmus"' >> ~/.bashrc
+```bash
+vim ~/.config/i3/config
 ```
 
-You also need for view ~/.config/i3/config for view config and edit "prefereneces" section.
-
-You can press Mod+Shift+R for reload i3-gaps.
+You can now press Mod+Shift+R for reload i3-gaps.
 
 ## Author
 

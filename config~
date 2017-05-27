@@ -11,6 +11,8 @@ for_window [class="^.*"] border pixel 0
 for_window [window_role="gimp-dock"] floating disable; move left; resize shrink width 50 px or 50ppt
 for_window [window_role="gimp-toolbox"] floating disable; move right; resize grow width 30 px or 30ppt
 
+set $c ~/.config/i3/
+
 # !
 # <PREFERENCES>
 # Change they for your preferences!
@@ -121,7 +123,7 @@ bindsym $mod+e layout toggle split
 
 # Take a screenshot
 
-bindsym $mod+s exec /opt/custom-scripts/screenshot
+bindsym $mod+s exec $c/screenshot
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -147,7 +149,6 @@ bindsym $mod+a focus parent
 #bindsym $mod+9 workspace 9
 #bindsym $mod+0 workspace 10
 
-bindsym $mod+grave exec --no-startup-id ~/.config/i3/i3-goto-workspace
 bindsym $mod+1 exec --no-startup-id $workspacer go -n 1
 bindsym $mod+2 exec --no-startup-id $workspacer go -n 2
 bindsym $mod+3 exec --no-startup-id $workspacer go -n 3
@@ -171,7 +172,6 @@ bindsym $mod+0 exec --no-startup-id $workspacer go -n 10
 #bindsym $mod+Shift+9 move container to workspace 9
 #bindsym $mod+Shift+0 move container to workspace 10
 
-bindsym $mod+Shift+grave exec --no-startup-id ~/.config/i3/i3-moveto-workspace
 bindsym $mod+Shift+1 exec --no-startup-id $workspacer move -n 1
 bindsym $mod+Shift+2 exec --no-startup-id $workspacer move -n 2
 bindsym $mod+Shift+3 exec --no-startup-id $workspacer move -n 3
@@ -185,7 +185,7 @@ bindsym $mod+Shift+0 exec --no-startup-id $workspacer move -n 10
 
 # rename current workspace
 
-bindsym $mod+n exec --no-startup-id ~/.config/i3/rename
+bindsym $mod+n exec --no-startup-id $c/rename
 
 # reload the configuration file
 #bindsym $mod+Shift+c reload
@@ -208,10 +208,10 @@ mode "resize" {
         bindsym semicolon resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Left resize shrink width 30 px or 30 ppt
+        bindsym Down resize grow height 30 px or 30 ppt
+        bindsym Up resize shrink height 30 px or 30 ppt
+        bindsym Right resize grow width 30 px or 30 ppt
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
@@ -237,17 +237,17 @@ mode "cmus" {
 	bindsym space	exec cmus-remote -u
 	bindsym p	exec cmus-remote -u
 
-	bindsym Up	exec pactl set-sink-volume 0 +5% 
+	bindsym Up	exec pactl set-sink-volume 0 +2% 
 
-	bindsym Down	exec pactl set-sink-volume 0 -5%
+	bindsym Down	exec pactl set-sink-volume 0 -2%
 
-	bindsym r	exec ~/.config/i3/cmus-toggle-repeat
+	bindsym r	exec $c/cmus-toggle-repeat
 
 	bindsym a	exec cmus-remote -C "seek -5"
 	bindsym h	exec cmus-remote -C "seek -5"
 
-	bindsym d	exec cmus-remote -C "seek 5"
-	bindsym l	exec cmus-remote -C "seek 5"
+	bindsym d	exec cmus-remote -C "seek +5"
+	bindsym l	exec cmus-remote -C "seek +5"
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
@@ -261,7 +261,7 @@ mode "cmus" {
 set $transparent #00000000
 
 bar {
-	status_command i3blocks -c ~/.config/i3/blocks
+	status_command i3blocks -c $c/blocks
 	i3bar_command i3bar -t
 	font pango:DejaVu Sans Mono, Icons 8
 	position bottom
@@ -348,5 +348,5 @@ bindsym $mod+u exec remote-toggle
 # Toggle split
 bindsym $mod+Shift+t split toggle
 
-# Rename this workspace by ~/.config/i3/i3-symb and ~/.config/i3/tab-name.js
-bindsym $mod+Shift+n exec ~/.config/i3/i3-symb
+# Rename this workspace by $c/i3-symb and $c/tab-name.js
+bindsym $mod+Shift+n exec $c/i3-symb

@@ -4,23 +4,21 @@ color=#666666
 separator=false
 separator_block_width=3
 
-
-
 [music]
 label= 
-command=if ! [[ $(cmus-remote -Q | grep "status ") ]]cat ~/cmus-status.txt
+command=cat ~/cmus-status.txt
 interval=5
 color=#FFFFFF
 
 [music-status]
 label= 
-command=~/.config/i3/cmus-status-sym
+command=~/.config/i3/cmus/cmus-status-sym
 interval=3
 color=#FFFFFF
 
 [music-repeat]
 label= 
-command=~/.config/i3/cmus-resym
+command=~/.config/i3/cmus/cmus-resym
 interval=3
 color=#FFFFFF
 

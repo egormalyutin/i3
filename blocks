@@ -4,24 +4,10 @@ color=#666666
 separator=false
 separator_block_width=3
 
-
-
 [music]
 label= 
-command=cat ~/cmus-status.txt
+command=cd ~/.config/i3/cmus && ./cmus
 interval=5
-color=#FFFFFF
-
-[music-status]
-label= 
-command=~/.config/i3/cmus-status-sym
-interval=3
-color=#FFFFFF
-
-[music-repeat]
-label= 
-command=~/.config/i3/cmus-resym
-interval=3
 color=#FFFFFF
 
 [separator]

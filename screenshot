@@ -1,0 +1,12 @@
+#!/bin/bash
+
+screenshots=~/Screenshots
+
+if ! [ -d $screenshots ]
+then
+	mkdir $screenshots
+fi
+
+cd $screenshots
+
+scrot -q 100

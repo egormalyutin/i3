@@ -1,6 +1,0 @@
-
-#/bin/bash
-
-umount /mnt/*
-
-rm -rdf /mnt/*
