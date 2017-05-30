@@ -4,7 +4,10 @@
 
 ## What's new?
 
-* New cmus status: not needs installation and not displays last song if you close terminal window!
+* Displaying weather on bar (you need to [configure](#configure-weather "How to configure it?") it)
+* You can toggle [Unified Remote](http://unifiedremote.com
+ "Unified Remote's site") Server with **Mod+u**. Server's files are saved at `~/.config/i3/ur`. You can view status of server at i3bar:  or  icon.
+* Moved to "trash" dir all useless trash.
 
 ## Screenshot
 
@@ -19,41 +22,39 @@
 * feh
 * compton
 * python
-* nodejs
+* Node.JS
 * PulseAudio
 * some browser
 * some wallpaper
 * cmus
 * Font Awesome
+* Perl
 
 ## Features list
 
-* Rename workspace tools:
-
-  1. If you press Mod+n, will show rename and renumber window.
-  2. If you press Mod+Shift+n, will show rename by icon number. You can view all icons at ~/.config/i3/tab-name.js.
-  3. If you start `tab-name-term` in terminal, workspace will be named with shell icon. There is another icons. Aliases list is in ~/.config/i3/tab-name. Also, there is all icons in ~/.config/i3/icons-cheat.html. You can run `tab-name-cheat` to view it in firefox.
-
+* If you press Mod+Shift+n, will show rename by icon window. You can view all icons at ~/.config/i3/tab-name.coffee.
 * Included my wallpaper :D
 * Preferences section in config file.
 * Transparent status bar.
 * Press Mod+b for open browser.
-* My i3blocks config. It's in ~/.config/i3/blocks and starts automatically. 
-* Press Mod+T for switch window title.
+* My i3blocks config. It's in `~/.config/i3/blocks` and starts automatically. 
+* Press `Mod+T` for switch window title.
 * My color scheme.
 * You can remote cmus:
 
-  1. Press Mod+Shift+C;
-  2. Press n or right for play next track;
-  3. Press u or left for play previous track;
-  4. Press space for toggle pause;
-  5. Press r for toggle repeat current track;
-  6. Press a for rewind music 5 seconds backward;
-  7. Press d for rewind music 5 seconds forward;
+  1. Press **Mod+Shift+C**;
+  2. Press **n** or right for play next track;
+  3. Press **u** or left for play previous track;
+  4. Press **space** for toggle pause;
+  5. Press **r** for toggle repeat current track;
+  6. Press **a** for rewind music 5 seconds backward;
+  7. Press **d** for rewind music 5 seconds forward;
   8. You can see the music status at bar.
 
+But, cmus not remotes from i3bar in my config. All controls are binded to hotkeys.
 
-* You can take a screenshot by pressing Mod+S. All screenshots saves at ~/Screenshots/ defaultly.
+* You can take a screenshot by pressing **Mod+S**. All screenshots saves at `~/Screenshots/` defaultly.
+* You can toggle Unified Remote Server with **Mod+u**. Server's files are saved at `~/.config/i3/ur`. You can view status of server at i3bar:  or  icon.
 
 ## Installaton
 
@@ -61,8 +62,8 @@
 
 Installing on Arch Linux (need yaourt):
 
-```
-yaourt i3-gaps i3blocks feh compton nodejs python pulseaudio cmus ttf-font-awesome 
+```bash
+yaourt -S i3-gaps i3blocks feh compton nodejs python pulseaudio cmus ttf-font-awesome perl
 ```
 
 If you have other linux distro, you need install they by yourself.
@@ -84,6 +85,45 @@ vim ~/.config/i3/config
 ```
 
 You can now press Mod+Shift+R for reload i3-gaps.
+
+### Configure weather
+
+You can see weather on i3bar next to user and PC name. But you need to configure it: defaultly, it displays weather in Russia, Omsk.
+
+Go to `~/.config/i3/` and view `./hints/accuweather-locationcodes.txt`:
+
+```bash
+cd ~/.config/i3
+less ./hints/accuweather-locationcodes.txt
+```
+
+You need to find your city. Just press **/** and type name of your city, e.g. Moscow, and press Enter. You must find string like this:
+
+```
+City Name = "Moscow, RU" Location = "ASI|RU|RS052|MOSKVA" Country = "Russia"
+```
+
+You need to copy "Location" from it, e.g. "ASI|RU|RS052|MOSKVA". We will call this "locationcode".
+
+Next, edit `../blocks`:
+
+```
+cd ..
+vim blocks
+```
+
+Next, press **/**, type "weather" and press Enter.
+
+You need find some like this:
+
+```
+[weather]
+command=node ~/.config/i3/scripts/weather.js -l "ASI|RU|RS058|OMSK" -m C || echo 
+interval=600
+color=#FFFFFF
+```
+
+Replace `"ASI|RU|RS058|OMSK"` to your locationcode, press **Mod+Shift+r** and check, is correct displays weather. If you want to display temperature in F, you need to replace `-m C` to `-m F`. You can check current weather at `accuweather.com`.  
 
 ## Author
 
