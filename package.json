@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/malyutinegor/i3#readme",
   "dependencies": {
-    "cmus-remote-node": "0.1.0"
+    "cmus-remote-node": "0.1.0",
+    "got": "7.0.0"
   }
 }

@@ -13,7 +13,7 @@ color=#FFFFFF
 [separator]
 
 [remote]
-command=remote-sym-status
+command=~/.config/i3/ur/cli/status
 interval=5
 color=#FFFFFF
 
@@ -31,6 +31,14 @@ color=#FFFFFF
 label=
 command=~/.config/i3/scripts/memory | sed -n 2p
 interval=5
+color=#FFFFFF
+
+[separator]
+
+[disk]
+label=
+command=~/.config/i3/scripts/disk
+interval=60
 color=#FFFFFF
 
 [separator]
@@ -63,11 +71,19 @@ color=#FFFFFF
 [time]
 label= 
 command=date '+%T'
-interval=60
+interval=20
 color=#FFFFFF
 
-
 [separator]
+
+[weather]
+command=node ~/.config/i3/scripts/weather.js -l "ASI|RU|RS058|OMSK" || echo 
+interval=600
+color=#FFFFFF
+
+[user-separator]
+command=echo 〉
+interval=once
 
 [user]
 command=echo $USER@$HOSTNAME

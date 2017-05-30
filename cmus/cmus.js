@@ -13,10 +13,10 @@ remote.status(function(status) {
   if (status && status.status !== 'stopped') {
     str += status.track.artist + ' - ' + status.track.title + ' ';
     if (status.status === 'playing') {
-      str += '  ';
+      str += '  ';
     }
     if (status.status === 'paused') {
-      str += '  ';
+      str += '  ';
     }
     if (status.settings.repeat_current === "true") {
       str += '  ';

@@ -1,0 +1,5 @@
+cmus next: cmus-remote -C "player-next"
+cmus pause: cmus-remote -u
+cmus play: cmus-remote -p
+cmus previous: cmus-remote -C "player-prev"
+cmus repeat: cmus-remote -C "toggle repeat_current"

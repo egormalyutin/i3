@@ -1,0 +1,333 @@
+<html>
+<head>
+	<title>Unified Remote</title>
+
+	<!-- Optimize viewport for mobile devices -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<!-- Google Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+	<link rel="Stylesheet" href="/codemirror/codemirror.css" />
+	<link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="/client.css" />
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="bootstrap3/assets/html5shiv.js"></script>
+	<script src="bootstrap3/assets/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	<!--[if lt IE 9]>
+	<div style="padding: 20px">
+		<p>Please update your browser. Supported browsers:</p>
+		<ul>
+			<li>All modern browsers (Chrome, Safari, Firefox, Opera, etc).</li>
+			<li>Internet Explorer 9+</li>
+		</ul>
+	</div>
+	<![endif]-->
+
+	<div id="container"></div>
+
+	<script id="tmain" type="text/ractive">
+		<div class="wrap">
+			<div class="nav narrow">
+				<a class="nav-brand" href="/client#" >
+					<div class="nav-top">
+						<img src="/img/brand.png" />
+						<span class="nav-title">Unified Remote</span>
+					</div>
+				</a>
+				<div class="nav-middle">
+					<ul>
+
+						{{#view.disconnected}}
+
+							<li>
+								<a href="#">
+									<span class="nav-icon">
+										<span class="fa fa-bolt"></span>
+									</span>
+									<span class="nav-title">Disconnected</span>
+								</a>
+							</li>
+
+						{{else}}
+
+							{{#remotes:i}}
+
+								{{# !Hidden }}
+								<li class="{{ active ? 'active' : '' }}">
+									<a href="/client/#/remote/{{ID}}" data-remote-id={{ID}}
+										class="{{ view.page.remotes ? 'active' : '' }}">
+
+										{{#Icon}}
+											<img class="nav-icon" src="data:image/png;base64,{{Icon}}" />
+										{{else}}
+											<i class="nav-icon fa fa-question-circle"></i>
+										{{/Icon}}
+
+										<span class="nav-title">{{Name}}</span>
+									</a>
+								</li>
+								{{/Hidden}}
+							{{else}}
+								<li>
+									<a href="#">
+										{{#view.loading_remotes}}
+											<span class="nav-icon">
+												<span class="fa fa-spinner fa-spin"></span>
+											</span>
+											<span class="nav-title">Loading remotes</span>
+										{{else}}
+											<span class="nav-icon">
+												<span class="fa fa-times"></span>
+											</span>
+											<span class="nav-title">No remotes</span>
+										{{/view.loading_remotes}}
+									</a>
+								</li>
+							{{/remotes}}
+
+							{{#if active_remotes === 0 }}
+								<a href="#">
+									<span class="nav-icon">
+										<span class="fa fa-times"></span>
+									</span>
+									<span class="nav-title">No active remotes</span>
+								</a>
+							{{/if}}
+						{{/view.disconnected}}
+					</ul>
+				</div>
+				<div class="nav-bottom">
+					Unified Intents &copy; {{year}}
+				</div>
+			</div>
+			<div class="main">
+
+				<div class="tips">
+					<div class="tip">{{view.tip}}</div>
+				</div>
+
+				<div class="main-content">
+
+					{{#view.page.remote}}
+						{{>tremote}}
+					{{/view.page.remote}}
+
+					{{#view.page.connecting}}
+						{{>tconnecting}}
+					{{/view.page.connecting}}
+
+					{{#view.page.unauthorized}}
+						{{>tunauthorized}}
+					{{/view.page.unauthorized}}
+
+					{{#view.page.login_user}}
+						{{>tlogin_user}}
+					{{/view.page.login_user}}
+
+					{{#view.page.login_anonymous}}
+						{{>tlogin_anonymous}}
+					{{/view.page.login_anonymous}}
+
+					{{#view.page.welcome}}
+						{{>twelcome}}
+					{{/view.page.welcome}}
+
+				</div>
+			</div>
+		</div>
+	</script>
+
+	<script id="twelcome" type="text/ractive">
+		<div class="page page-welcome">
+			<h2>Unified Remote</h2>
+			<p>This is an early lightweight version of a web-based Unified Remote client.</p>
+			<div class="page-welcome-buttons">
+				<div>
+					<a href="/web/" class="button raised"><i class="fa fa-wifi"></i> Server Manager</a>
+				</div>
+				<div>
+					<a href="http://www.unifiedremote.com/download#app" class="button raised"><i class="fa fa-download"></i> Download App</a>
+				</div>
+				<div>
+					<a href="http://www.unifiedremote.com/help" class="button raised"><i class="fa fa-question-circle"></i> Help &amp; Support</a>
+				</div>
+			</div>
+		</div>
+	</script>
+
+	<script id="tconnecting" type="text/ractive">
+		<div class="">
+			<center>
+				<h2>
+				<i class="fa fa-refresh fa-spin" /> &nbsp;
+				Connecting, please wait...
+			  </h2>
+		  </center>
+		</div>
+	</script>
+
+	<script id="tlogin_user" type="text/ractive">
+		<div class="page">
+			<h2>Sign In</h2>
+		  <p>Server needs your authentication to continue</p>
+      <form role="form">
+        <div class="form-group">
+          <label for="user">Username</label>
+          <input type="text" value="{{auth.username}}" class="form-control" id="user"  data-target="auth_submit" on-keyup="input_keydown">
+        </div>
+        <div class="form-group">
+          <label for="pass">Password</label>
+          <input type="password" value="{{auth.password}}" class="form-control" id="pass" data-target="auth_submit" on-keyup="input_keydown">
+        </div>
+      </form>
+		  <div class="buttons">
+		  	<div class="button raised" on-click="login:{{auth.username}},{{auth.password}}" id="auth_submit">Done</div>
+		  </div>
+		</div>
+	</script>
+
+	<script id="tlogin_anonymous" type="text/ractive">
+		<div class="page">
+			<h2>Sign In</h2>
+		  <p>Server needs your authentication to continue</p>
+      <form role="form">
+        <div class="form-group">
+          <label for="pass">Password</label>
+          <input type="password" value="{{auth.password}}" class="form-control" id="pass"  data-target="auth_submit" on-keyup="input_keydown">
+        </div>
+      </form>
+		  <div class="buttons">
+		  	<div class="button raised" on-click="login:{{undefined}},{{auth.password}}" id="auth_submit">Done</div>
+		  </div>
+		</div>
+	</script>
+
+	<script id="tunauthorized" type="text/ractive">
+		<div class="page">
+			<h2><i class="fa fa-warning" /> &nbsp; Invalid password</h2>
+		  <p>Please try again...</p>
+		  <div class="buttons">
+		  	<a class="button raised" href="/client#">Try again</div>
+		  </div>
+		</div>
+	</script>
+
+	<script id="tremote" type="text/ractive">
+		<div class="page">
+			<h2>{{current_remote.Name}}</h2>
+			<div class="remote-layout" id="remote-layout">
+				{{#current_actions.Groups}}
+					{{>tlayout}}
+				{{/current_actions.Groups}}
+			</div>
+		</div>
+	</script>
+
+	<script id="tlayout" type="text/ractive">
+		<table class="{{#StartOfTab}}remote-tab-start{{/StartOfTab}}">
+			<tr>
+				{{#each Actions}}
+				<td style="{{element_child_style(Actions)}}">
+
+					{{# Type === "Button"}}
+						<div id="{{ID}}" class="remote-action remote-widget {{Class}} button raised"
+							width="100%" on-click="simple_event:{{OnTap}}">
+							<i class="remote-icon {{Icon}}"></i>
+							<span class="remote-text">{{Text}}</span>
+							{{init_onhold(.)}}
+						</div>
+					{{/Type}}
+
+					{{# Type === "Toggle"}}
+						<div id="{{ID}}" class="remote-action remote-widget {{Class}} button raised"
+							width="100%"
+							data-down="false"
+							on-mousedown="toggle_down:{{OnDown}}"
+							on-mouseup="simple_event:{{OnUp}}"
+							on-click="toggle_changed:{{OnChange}},{{OnTap}}" >
+							<i class="remote-icon {{Icon}}"></i>
+							<span class="remote-text">{{Text}}</span>
+							{{init_onhold(.)}}
+						</div>
+					{{/Type}}
+
+					{{# Type === "Label"}}
+						<div id="{{ID}}" class="remote-action remote-widget {{Class}} button raised"
+							width="100%" on-click="simple_event:{{OnTap}}">
+							<i class="remote-icon {{Icon}}"></i>
+							<span class="remote-text">&nbsp;{{Text}}</span>
+							{{init_onhold(.)}}
+						</div>
+					{{/Type}}
+
+					{{# Type === "Image"}}
+						<center id="{{ID}}" class="remote-action remote-widget {{Class}}"
+							width="100%" on-click="simple_event:{{OnTap}}">
+							<img class="remote-image" src="{{try_image(Image)}}" />
+							{{init_onhold(.)}}
+						</center>
+					{{/Type}}
+
+					{{# Type === "Slider" }}
+						<div id="{{ID}}" class="remote-slider-wrapper">
+
+							<input class="remote-widget remote-slider remote-slider-value"
+								type="range" min='0' max={{ProgressMax}}
+								on-mousedown="slider_down" on-mouseup="slider_up">
+
+							<center class="remote-slider-info">
+								<div class="remote-slider-text">{{Text}}</div>
+								<div class="remote-slider-value-text">{{Progress}}</div>
+							</center>
+
+							{{init_slider(.)}} <!-- events are bound here  -->
+							{{init_onhold(.)}}
+						</div>
+					{{/Type}}
+				</td>
+				{{/each}}
+			</tr>
+		</table>
+	</script>
+
+	<!-- Load JavaScript last to improve load times -->
+	<script type="text/javascript" src="/sha256.js"></script>
+	<script type="text/javascript" src="/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="/jquery/jquery.taphold.js"></script>
+	<script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/lodash/lodash.compat.js"></script>
+	<script type="text/javascript" src="/ractive/ractive.js"></script>
+	<script type="text/javascript" src="/ur/ur.icons.js"></script>
+	<script type="text/javascript" src="/ur/ur.events.js"></script>
+	<script type="text/javascript" src="/ur/ur.client.js"></script>
+	<script type="text/javascript" src="/ur/ur.store.js"></script>
+	<script type="text/javascript" src="/ur/ur.util.js"></script>
+	<script type="text/javascript" src="/ur/ur.enums.js"></script>
+	<script type="text/javascript" src="/ur/ur.render.js"></script>
+	<script type="text/javascript" src="/client.js"></script>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-20883114-14', {
+		'cookieDomain': 'none'
+	  });
+	  ga('send', 'pageview');
+
+	</script>
+</body>
+</html>

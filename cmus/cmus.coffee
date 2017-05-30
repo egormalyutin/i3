@@ -11,10 +11,10 @@ remote.status (status) ->
 		str += status.track.artist + ' - ' + status.track.title + ' '
 
 		if status.status is 'playing'
-			str += '  '
+			str += '  '
 
 		if status.status is 'paused'
-			str += '  '
+			str += '  '
 
 		if status.settings.repeat_current is "true"
 			str += '  '

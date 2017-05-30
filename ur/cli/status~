@@ -1,0 +1,10 @@
+#!/bin/bash
+
+started=$(pgrep ur-remote)
+
+if ! [[ started ]]
+then
+	echo 
+else
+	echo 
+fi

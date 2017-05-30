@@ -1,0 +1,14 @@
+#!/bin/bash
+
+c=$(cmus-remote -Q)
+
+playing=$(echo $c | grep 'status playing')
+
+if [[ $playing ]]
+then
+	echo 
+	cmus-remote -u
+else
+	echo 
+	cmus-remote -p
+fi

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+started=$(pgrep ur-remote)
+
+if [[ $started ]]
+then
+	~/.config/i3/remote/cli/stop
+else
+	~/.config/i3/remote/cli/start
+fi
