@@ -35,7 +35,6 @@
 	* Node.JS
 	* Python
 * Fonts:
-	* Iosevka Font
 	* Font Awesome
 
 ## Features list
@@ -71,7 +70,7 @@ But, cmus not remotes from i3bar in my config. All controls are binded to hotkey
 Installing on Arch Linux (need yaourt):
 
 ```bash
-yaourt -S i3-gaps i3blocks feh compton pulseaudio cmus perl lua nodejs python ttf-iosevka ttf-font-awesome
+yaourt -S i3-gaps i3blocks feh compton pulseaudio cmus perl lua nodejs python ttf-font-awesome
 ```
 
 If you have other linux distro, you need install they by yourself.
