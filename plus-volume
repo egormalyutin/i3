@@ -1,0 +1,11 @@
+#!/bin/bash
+
+PLUS="+$1%"
+CURRENT=$(amixer get Master | grep -E -o '[0-9]{1,3}?%' | grep -E -o '[0-9]{1,3}?' | head -1)
+
+if [[ $(echo "($CURRENT + ( $1 )) <= 100" | bc) == 1 ]]
+then
+	pactl set-sink-volume 0 $PLUS 
+else
+	pactl set-sink-volume 0 100%
+fi

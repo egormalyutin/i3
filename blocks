@@ -78,7 +78,7 @@ color=#FFFFFF
 
 [weather]
 command=node ~/.config/i3/scripts/weather.js -l "ASI|RU|RS058|OMSK" -m C || echo 
-interval=600
+interval=60
 color=#FFFFFF
 
 [user-separator]

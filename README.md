@@ -7,8 +7,7 @@
 * Displaying weather on bar (you need to [configure](#configure-weather "How to configure it?") it)
 * You can toggle [Unified Remote](http://unifiedremote.com
  "Unified Remote's site") Server with **Mod+u**. Server's files are saved at `~/.config/i3/ur`. You can view status of server at i3bar:  or  icon.
-* Moved to "trash" dir all useless trash.
-
+* All useless trash was moved to "trash" dir.
 ## Screenshot
 
 ![Screenshot](https://raw.githubusercontent.com/malyutinegor/i3/master/screen.png "Screenshot")

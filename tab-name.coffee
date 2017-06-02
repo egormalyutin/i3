@@ -37,6 +37,8 @@ do ->
 			       paint: ; 
 
 			       music: ; 
+			       cmus: ; 
+			       moc: ; 
 
 			       files: ; 
 
