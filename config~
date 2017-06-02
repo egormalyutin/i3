@@ -263,7 +263,7 @@ set $transparent #00000000
 bar {
 	status_command i3blocks -c $c/blocks
 	i3bar_command i3bar -t
-	font pango: Iosevka, Font Awesome 8
+	font pango: Iosevka Term, Font Awesome 8
 	position bottom
 	colors {
 		background $transparent

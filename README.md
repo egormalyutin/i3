@@ -14,20 +14,29 @@
 
 ### If you going to install my configs, please, read all this readme!
 
+### Not forget to watch and update configs, I'm adding new features and dependencies! :D
+
 ## Dependencies
 
-* i3-gaps          
-* i3blocks
-* feh
-* compton
-* python
-* Node.JS
-* PulseAudio
-* some browser
-* some wallpaper
-* cmus
-* Font Awesome
-* Perl
+* WM components:
+	* i3-gaps          
+	* i3blocks
+	* feh
+	* compton
+* Custom items:
+	* some browser
+	* some wallpaper
+* Music and volume:
+	* PulseAudio
+	* `cmus` for playing music
+* Programming languages interpeters:
+	* Perl
+	* Lua
+	* Node.JS
+	* Python
+* Fonts:
+	* Iosevka Font
+	* Font Awesome
 
 ## Features list
 
@@ -62,7 +71,7 @@ But, cmus not remotes from i3bar in my config. All controls are binded to hotkey
 Installing on Arch Linux (need yaourt):
 
 ```bash
-yaourt -S i3-gaps i3blocks feh compton nodejs python pulseaudio cmus ttf-font-awesome perl
+yaourt -S i3-gaps i3blocks feh compton pulseaudio cmus perl lua nodejs python ttf-iosevka ttf-font-awesome
 ```
 
 If you have other linux distro, you need install they by yourself.
