@@ -65,7 +65,7 @@ But, cmus not remotes from i3bar in my config. All controls are binded to hotkey
 
 	* Press **Mod+o** for plus outer gaps;
     * Press **Mod+Shift+o** for minus outer gaps;
-    * Press **Mod+i** for minus inner gaps;
+    * Press **Mod+i** for plus inner gaps;
     * Press **Mod+Shift+i** for minus inner gaps.
     
     
