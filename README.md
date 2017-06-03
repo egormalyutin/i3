@@ -61,6 +61,14 @@
 
 But, cmus not remotes from i3bar in my config. All controls are binded to hotkeys.
 
+* Change gaps tool:
+
+	* Press **Mod+o** for plus outer gaps;
+    * Press **Mod+Shift+o** for minus outer gaps;
+    * Press **Mod+i** for minus inner gaps;
+    * Press **Mod+Shift+i** for minus inner gaps.
+    
+    
 * You can take a screenshot by pressing **Mod+S**. All screenshots saves at `~/Screenshots/` defaultly.
 * You can toggle Unified Remote Server with **Mod+u**. Server's files are included at `~/.config/i3/ur`. You can view status of server at i3bar:  or  icon.
 
