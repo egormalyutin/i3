@@ -6,7 +6,7 @@
 
 * Displaying weather on bar (you need to [configure](#configure-weather "How to configure it?") it)
 * You can toggle [Unified Remote](http://unifiedremote.com
- "Unified Remote's site") Server with **Mod+u**. Server's files are saved at `~/.config/i3/ur`. You can view status of server at i3bar:  or  icon.
+ "Unified Remote's site") Server with **Mod+u**. Server's files are included at `~/.config/i3/ur`. You can view status of server at i3bar:  or  icon.
 * All useless trash was moved to "trash" dir.
 ## Screenshot
 
@@ -62,7 +62,7 @@
 But, cmus not remotes from i3bar in my config. All controls are binded to hotkeys.
 
 * You can take a screenshot by pressing **Mod+S**. All screenshots saves at `~/Screenshots/` defaultly.
-* You can toggle Unified Remote Server with **Mod+u**. Server's files are saved at `~/.config/i3/ur`. You can view status of server at i3bar:  or  icon.
+* You can toggle Unified Remote Server with **Mod+u**. Server's files are included at `~/.config/i3/ur`. You can view status of server at i3bar:  or  icon.
 
 ## Installaton
 

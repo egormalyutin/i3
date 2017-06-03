@@ -40,13 +40,13 @@
 
 ## Features list
 
-* If you press Mod+Shift+n, will show rename by icon window. You can view all icons at ~/.config/i3/tab-name.coffee.
+* If you press **Mod+Shift+n**, will show rename by icon window. You can view all icons at ~/.config/i3/tab-name.coffee.
 * Included my wallpaper :D
 * Preferences section in config file.
 * Transparent status bar.
-* Press Mod+b for open browser.
+* Press **Mod+b** for open browser.
 * My i3blocks config. It's in `~/.config/i3/blocks` and starts automatically. 
-* Press `Mod+T` for switch window title.
+* Press **Mod+T** for switch window title.
 * My color scheme.
 * You can remote cmus:
 
@@ -92,7 +92,7 @@ You also need for view ~/.config/i3/config for view config and edit "preferenece
 vim ~/.config/i3/config
 ```
 
-You can now press Mod+Shift+R for reload i3-gaps.
+You can now press **Mod+Shift+R** for reload i3-gaps.
 
 ### Configure weather
 
