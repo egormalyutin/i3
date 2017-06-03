@@ -1,6 +1,6 @@
 # i3
 
-### My configs for i3gaps.
+### My configs for i3-gaps.
 
 ## What's new?
 
