@@ -4,6 +4,8 @@ color=#666666
 separator=false
 separator_block_width=3
 
+[separator]
+
 [music]
 label= 
 command=cd ~/.config/i3/cmus && ./cmus
