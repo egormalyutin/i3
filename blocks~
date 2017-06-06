@@ -4,6 +4,11 @@ color=#666666
 separator=false
 separator_block_width=3
 
+[lol]
+command=node ~/.config/i3/cmus/change/index.js
+interval=once
+color=#FFFFFF
+
 [separator]
 
 [music]
