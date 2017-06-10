@@ -29,7 +29,7 @@
 * Music and volume:
 	* PulseAudio
 	* `cmus` for playing music
-* Programming languages interpeters:
+* Programming languages interpreters:
 	* Perl
 	* Lua
 	* Node.JS
