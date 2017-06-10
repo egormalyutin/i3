@@ -14,28 +14,28 @@ for_window [window_role="gimp-toolbox"] floating disable; move right; resize gro
 set $c ~/.config/i3/
 
 # !
-# Change this variables for your preferences! / Измените эти переменные по вашим предпочтениям!
-# </PREFERENCES / ПРЕДПОЧТЕНИЯ>
+# <PREFERENCES>
+# Change they for your preferences!
 
-# Inner gaps in i3-gaps. / Внутренние границы для окон
+# Inner gaps in i3-gaps.
 set $innerGaps 10
  
-# Outer gaps in i3-gaps. / Внешние границы для окон
+# Outer gaps in i3-gaps.
 set $outerGaps 0
  
-# Command for start your browsers. They opens if you press $mod+b and $mod+Shift+b. / Комманды для вызова ваших браузеров. Они откроются, если вы нажмёте $mod+b или $mod+shift+b.
+# Command for start your browsers. They opens if you press $mod+b and $mod+Shift+b.
 set $browserSmall luakit 
 set $browser      firefox
 
-# Path to your wallpaper. / Путь к вашим обоям
+# Path to your wallpaper.
 set $wallpaper ~/.config/i3/wallpaper.png
  
-# Your mod key. / Ваша super-клавиша.
+# Your mod key.
 set $mod Mod4 
 
 
-# Change this variables for your preferences! / Измените эти переменные по вашим предпочтениям!
-# </PREFERENCES / ПРЕДПОЧТЕНИЯ>
+# Change they for your preferences!
+# </PREFERENCES>
 # !
 
 # i3 config file (v4)
