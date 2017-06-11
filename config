@@ -60,7 +60,8 @@ set $transparent #00000000
 # X core fonts rendering does not support right-to-left and this being a bitmap
 # font, it doesn’t scale on retina/hidpi displays.
 
-set $workspacer ~/.config/i3/i3-workspacer.py
+set $workspacer   ~/.config/i3/i3-workspacer.py
+set $workspacer2  ~/.config/i3/goto
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -149,16 +150,16 @@ bindsym $mod+a focus parent
 #bindsym $mod+9 workspace 9
 #bindsym $mod+0 workspace 10
 
-bindsym $mod+1 exec --no-startup-id $workspacer go -n 1
-bindsym $mod+2 exec --no-startup-id $workspacer go -n 2
-bindsym $mod+3 exec --no-startup-id $workspacer go -n 3
-bindsym $mod+4 exec --no-startup-id $workspacer go -n 4
-bindsym $mod+5 exec --no-startup-id $workspacer go -n 5
-bindsym $mod+6 exec --no-startup-id $workspacer go -n 6
-bindsym $mod+7 exec --no-startup-id $workspacer go -n 7
-bindsym $mod+8 exec --no-startup-id $workspacer go -n 8
-bindsym $mod+9 exec --no-startup-id $workspacer go -n 9
-bindsym $mod+0 exec --no-startup-id $workspacer go -n 10
+bindsym $mod+1 exec $workspacer2 1
+bindsym $mod+2 exec $workspacer2 2
+bindsym $mod+3 exec $workspacer2 3
+bindsym $mod+4 exec $workspacer2 4
+bindsym $mod+5 exec $workspacer2 5
+bindsym $mod+6 exec $workspacer2 6
+bindsym $mod+7 exec $workspacer2 7
+bindsym $mod+8 exec $workspacer2 8
+bindsym $mod+9 exec $workspacer2 9
+bindsym $mod+0 exec $workspacer2 10
 
 # move focused container to workspace
 #bindsym $mod+Shift+1 move container to workspace 1
@@ -309,6 +310,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 6
 # Wallpapers and effects
 exec compton -f --vsync drm
 exec feh --bg-scale $wallpaper &
+exec ~/.config/i3/onworkspace &
 
 # Key bind for fix wallpapers on another monitors
 # WARNING: It's only for my monitor!

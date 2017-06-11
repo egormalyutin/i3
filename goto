@@ -1,0 +1,16 @@
+#!/bin/bash
+
+w=$(echo "$1 + 1" | bc)
+
+p=$(echo $w"p")
+
+work=$(sed -n $p /tmp/i3-workspaces.txt)
+
+if [[ $work ]]
+then
+	act="workspace $work"
+	i3-msg $act 
+else
+	act="workspace $1"
+	i3-msg $act
+fi

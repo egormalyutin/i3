@@ -1,0 +1,5 @@
+var i3 = require('i3').createClient();
+
+console.log(i3.__proto__)
+
+console.log(i3.outputs('get_workspaces'))
