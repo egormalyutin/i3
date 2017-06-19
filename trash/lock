@@ -1,0 +1,11 @@
+#!/bin/bash
+
+rm /tmp/lockscreen.png
+
+import -window root -quality 1 /tmp/lockscreen.png
+
+convert /tmp/lockscreen.png -blur 5 /tmp/lockscreen.png
+
+[[ -f ~/.config/i3/lockscreen.png ]] && convert /tmp/lockscreen.png  ~/.config/i3/lockscreen.png -gravity center -composite -matte /tmp/lockscreen.png
+
+i3lock -u -e -i /tmp/lockscreen.png

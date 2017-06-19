@@ -1,0 +1,28 @@
+#!/bin/bash
+
+step() {
+	center="$SONG $DATE"
+
+	echo $center
+}
+
+update_song() {
+	SONG=$(cd ~/.config/i3/mpd && ~/.config/i3/mpd/mpd | grep ".")
+	step
+	sleep 5
+	update_song
+}
+
+update_date() {
+	DATE=$(date)
+	step
+	sleep 1
+	update_date
+}
+
+init() {
+	update_song &
+	update_date &
+}
+
+init

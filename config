@@ -25,7 +25,7 @@ set $outerGaps 0
  
 # Command for start your browsers. They opens if you press $mod+b and $mod+Shift+b. / Комманды для вызова ваших браузеров. Они откроются, если вы нажмёте $mod+b или $mod+shift+b.
 set $browserSmall luakit 
-set $browser      firefox
+set $browser      chromium
 
 # Path to your wallpaper. / Путь к вашим обоям
 set $wallpaper ~/.config/i3/wallpaper.png
@@ -85,10 +85,10 @@ bindsym $mod+d exec dmenu_run
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+#bindsym $mod+j focus left
+#bindsym $mod+k focus down
+#bindsym $mod+l focus up
+#bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -255,15 +255,53 @@ mode "cmus" {
         bindsym Escape mode "default"
 }
 
+# Remote mpd
+
+bindsym $mod+Shift+p mode "mpd"
+
+mode "mpd" {
+        
+	# remote keys
+	
+	bindsym Right	exec mpc next
+	bindsym n	exec mpc next
+
+	bindsym Left	exec mpc prev
+	bindsym u	exec mpc prev
+
+	bindsym space	exec mpc toggle
+	bindsym p	exec mpc toggle
+
+	bindsym Up	exec ~/.config/i3/plus-volume 2
+
+	bindsym Down	exec pactl set-sink-volume 0 -2%
+
+	bindsym r	exec mpc single
+
+	bindsym a	exec mpc seek -5
+	bindsym h	exec mpc seek -5
+
+	bindsym d	exec mpc seek +5
+	bindsym l	exec mpc seek +5
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 #                 RRGGBBAA
 set $transparent #00000000
 
+#exec_always --no-startup-id sleep 2 && conky | lemonbar -b -f "xos4 Terminus:pixelsize=12" -f "Font Awesome:pixelsize=12"
+#exec_always --no-startup-id ~/.config/i3/lemonbar/start 
+
+
 bar {
 	status_command i3blocks -c $c/blocks
-	i3bar_command i3bar -t
+	i3bar_command i3bar -t 
 	font pango: Droid Sans, Font Awesome 8
 	position bottom
 	colors {
@@ -277,7 +315,7 @@ bar {
 		urgent_workspace   $transparent #ff000050    #ffffff
 	}
 
-    
+   
 }
 
 # Window settings
@@ -335,14 +373,17 @@ bindsym $mod+Shift+i  gaps inner current minus 10
 
 # Set keys to move windows 
 
-bindsym $mod+Shift+h    move left 10
-bindsym $mod+Shift+j    move down 10
-bindsym $mod+Shift+k    move up 10
-bindsym $mod+Shift+l    move right 10
+#bindsym $mod+Shift+h    move left 10
+#bindsym $mod+Shift+j    move down 10
+#bindsym $mod+Shift+k    move up 10
+#bindsym $mod+Shift+l    move right 10
 
 # Set gaps to default
 
-bindsym $mod+Shift+g  gaps inner all set $innerGaps; gaps outer all set $outerGaps
+bindsym $mod+Shift+g  gaps inner current set $innerGaps; gaps outer current set $outerGaps
+
+# Remove gaps
+bindsym $mod+g 		gaps inner current set 0; gaps outer current set 0
 
 # Toggle Unified Remote Server daemon
 bindsym $mod+u exec ~/.config/i3/ur/cli/toggle
@@ -352,3 +393,7 @@ bindsym $mod+Shift+t split toggle
 
 # Rename this workspace by $c/i3-symb and $c/tab-name.js
 bindsym $mod+Shift+n exec $c/i3-symb
+
+# Lock
+bindsym $mod+l 		exec ~/.config/i3/lock
+bindsym $mod+Shift+l 	exec ~/.config/i3/lock && systemctl suspend 

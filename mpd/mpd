@@ -1,0 +1,10 @@
+#!/bin/bash
+
+c=$(mpc)
+
+if [[ $c == "" ]]
+then
+	echo
+else
+	node mpd.js
+fi

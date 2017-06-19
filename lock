@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# INSIDE
+
+inside=666666bb
+
+# STRINGS
+
+top="Type password"
+bottom="$USER@$HOSTNAME"
+
+verify="Verifying password..."
+
+wrong="Access error" 
+
+# COMMAND
+
+i3lock -k -B 5 --datecolor=ffffffff --timecolor=ffffffff --timesize=23 --timestr="$top"  --datestr="$bottom" --insidecolor="$inside" --insidevercolor="$inside" --insidewrongcolor="$inside" --ringvercolor=3d7aa8ff --ringwrongcolor=ff0000ff --ringcolor=3d7aa8ff --linecolor=ffffff00 --separatorcolor=3d7aa855 --textcolor=ffffffff --keyhlcolor=ffffffff --bshlcolor=ff5555ff --indicator --radius=120 --wrongtext="$wrong" --veriftext="$verify" --textsize=23

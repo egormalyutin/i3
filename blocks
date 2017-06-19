@@ -5,8 +5,16 @@ separator=false
 separator_block_width=3
 
 [music]
-label= 
-command=cd ~/.config/i3/cmus && ./cmus
+label=
+
+# Uncomment needed line / Раскомментирыйте нужную строку:
+
+# For cmus: / Для cmus:
+#command=cd ~/.config/i3/cmus && ./cmus 
+
+# For mpd: / Для mpd:
+command=cd ~/.config/i3/mpd && ./mpd
+
 interval=5
 color=#FFFFFF
 
@@ -44,8 +52,7 @@ color=#FFFFFF
 [separator]
 
 [battery]
-label=⚡
-command=~/.config/i3/scripts/battery | sed -n 2p
+command=~/.config/i3/scripts/battery
 interval=20
 color=#FFFFFF
 
