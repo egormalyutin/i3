@@ -1,0 +1,8 @@
+#!/bin/bash
+
+low=$(echo "$(acpi -b | grep -o "\w\+, [0-9]\+" | grep -o "[0-9]\+") < 15" | bc)
+
+if [[ $low == "1" ]] 
+then
+	i3-nagbar -m "BATTERY LOW" -f "-*-tewi-medium-r-*-*-17-*-*-*-*-*-*-*" &>> /dev/null
+fi
