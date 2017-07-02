@@ -35,7 +35,7 @@ color=#FFFFFF
 [CPU]
 label=
 command=~/.config/i3/scripts/cpu_usage
-interval=5
+interval=2
 color=#FFFFFF
 
 [separator]

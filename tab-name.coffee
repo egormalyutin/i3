@@ -25,6 +25,10 @@ do ->
 	ex.table = ex.toTable "browser: ;
 			       web: ;
 			       net: ;
+			       firefox: ;
+			       chrome: ;
+			       chromium: ;
+			       luakit: ;
 
 			       terminal: ; 
 			       term: ; 
@@ -39,6 +43,9 @@ do ->
 			       music: ; 
 			       cmus: ; 
 			       moc: ; 
+			       ncmpcpp: ; 
+			       mpd: ; 
+			       ncmpc: ; 
 
 			       files: ; 
 
