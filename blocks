@@ -4,7 +4,12 @@ color=#666666
 separator=false
 separator_block_width=3
 
-[lol]
+[onlow]
+command=~/Документы/gmail
+color=#FFFFFF
+interval=300
+
+[onlow]
 command=~/.config/i3/onlow
 interval=300
 color=#FFFFFF

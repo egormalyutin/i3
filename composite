@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if ! [[ $(pgrep compton) == "" ]]
+then
+	pkill compton
+else
+	compton -f --vsync drm
+fi
