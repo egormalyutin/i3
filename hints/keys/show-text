@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cat ~/.config/i3/hints/keys/text
+sleep infinity

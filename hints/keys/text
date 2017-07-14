@@ -1,0 +1,40 @@
+
+  KEY			ACTION				    KEY			ACTION
+  ─────────────────────────────────────────────────────────────────────────────────────────────────
+
+		  WM							  GAPS
+  Mod+Shift+R		Reload configs			    Mod+O		Plus outer gaps 
+  Mod+Shift+E		Exit				    Mod+Shift+O		Minus outer gaps
+  Mod+Shift+W		Toggle composite		    Mod+I		Plus inner gaps
+			manager				    Mod+Shift+I		Minus inner gaps
+  Mod+Shift+M		Connect second monitor		    Mod+Shift+G		Set gaps to default
+							    Mod+G		Remove gaps
+  		LAUNCH					    
+  Mod+Enter		Start terminal					  MODES
+  Mod+B			Start Luakit			    Mod+Shift+resize	Set mode to resize
+  Mod+Shift+B		Start Chromium			    Mod+Shift+C		Set mode to cmus
+  Mod+D			Start dmenu			    Mod+Shift+P		Set mode to MPD
+							    Escape or Space	Exit from any mode
+		WINDOWS						       
+  Mod+Shift+Q		Close window			    		RESIZE MODE
+  Mod+{ARROW}		Focus {ARROW}			    h or Left		Shrink width to 10px
+  Mod+Shift+{ARROW}	Move window {ARROW}		    j or Down		Grow height to 10px
+  Mod+H			Horizontal orientation		    k or Up		Shrink height to 10px
+  Mod+V			Vertical orientation		    l or Right		Grow width to 10px
+  Mod+F			Toggle fullscreen			    
+  Mod+W			Change layout to stacked	   	    CMUS OR MPD MODE 
+  Mod+W			Change layout to tabbed		    Right or n		Next track
+  Mod+Shift+Space	Toggle tiling/floating  	    Left  or u		Previous track
+  Mod+Space		Toggle focus to			    Space or p		Toggle pause
+			tiling/floating windows		    Up			Grow volume to 2
+  Mod+A			Focus parent container		    Down		Shrink volume to 2
+  Mod+1..0		Move to workspace		    R			Toggle repeat current
+  Mod+Shift+1..0	Move window to workspace	    a or h		Rewind -5 seconds 
+  Mod+T			Toggle borders for window	    d or l		Rewind +5 seconds
+
+		 TOOLS
+
+  Mod+S			Take a screenshot
+  Mod+U			Toggle Unified Remote Daemon
+  Mod+L			Lock
+  Mod+Shift+L		Lock and suspend

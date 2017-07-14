@@ -1,0 +1,7 @@
+#!/bin/bash
+
+while [[ true ]]
+do
+	#termite -c ~/.config/i3/hints/keys/termite -e ~/.config/i3/hints/keys/show-text
+	xfce4-terminal -x ~/.config/i3/hints/keys/show-text
+done

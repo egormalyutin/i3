@@ -11,6 +11,7 @@ for_window [class="^.*"] border pixel 0
 for_window [window_role="gimp-dock"] floating disable; move left; resize shrink width 50 px or 50ppt
 for_window [window_role="gimp-toolbox"] floating disable; move right; resize grow width 30 px or 30ppt
 
+
 set $c ~/.config/i3/
 
 # !
@@ -186,7 +187,7 @@ bindsym $mod+Shift+0 exec --no-startup-id --no-startup-id  $workspacer move -n 1
 
 # rename current workspace
 
-bindsym $mod+n exec --no-startup-id --no-startup-id  $c/rename
+#bindsym $mod+n exec --no-startup-id --no-startup-id  $c/rename
 
 # reload the configuration file
 #bindsym $mod+Shift+c reload
@@ -398,5 +399,11 @@ bindsym $mod+Shift+t split toggle
 bindsym $mod+Shift+n exec --no-startup-id --no-startup-id $c/i3-symb
 
 # Lock
-bindsym $mod+l 		exec --no-startup-id --no-startup-id ~/.config/i3/lock
-bindsym $mod+Shift+l 	exec --no-startup-id --no-startup-id ~/.config/i3/lock && systemctl suspend 
+bindsym $mod+l 		exec --no-startup-id ~/.config/i3/lock
+bindsym $mod+Shift+l 	exec --no-startup-id ~/.config/i3/lock && systemctl suspend 
+
+# Helpkeys
+exec --no-startup-id ~/.config/i3/hints/keys/show
+exec --no-startup-id i3-msg "[window_role='xfce4-terminal'] move scratchpad"
+for_window [window_role="xfce4-terminal"] move scratchpad, floating enable, move position 393 123, resize set 615 550, scratchpad show; 
+bindsym $mod+F1 [window_role="xfce4-terminal"] scratchpad show;
