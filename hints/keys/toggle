@@ -1,0 +1,9 @@
+
+#!/bin/bash
+
+if [[ $(pgrep urxvt) == "" ]]
+then
+	urxvt -e ~/.config/i3/hints/keys/helpkeys-wm
+else
+	pkill urxvt
+fi
