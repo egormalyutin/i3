@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [[ $1 == "1" ]]
+then
+	urxvt -e ~/.config/i3/widgets/free-wm &>> /dev/null
+	~/.config/i3/scripts/memory | sed -n 2p
+else
+	~/.config/i3/scripts/memory | sed -n 2p
+fi

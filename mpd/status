@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [[ $1 == "1" ]]
+then
+	mpc toggle >> /dev/null
+fi
+if [[ $(mpc | grep "\[playing\]") ]]
+then
+	echo  
+fi
+
+if [[ $(mpc | grep "\[paused\]") ]]
+then
+	echo  
+fi

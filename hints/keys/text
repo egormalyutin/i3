@@ -2,39 +2,38 @@
   KEY			ACTION				    KEY			ACTION
   ───────────────────────────────────────────────────────────────────────────────────────────────────
 
-		  WM							  GAPS
-  Mod+Shift+R		Reload configs			    Mod+O		Plus outer gaps 
-  Mod+Shift+E		Exit				    Mod+Shift+O		Minus outer gaps
-  Mod+Shift+W		Toggle composite		    Mod+I		Plus inner gaps
-			manager				    Mod+Shift+I		Minus inner gaps
-  Mod+Shift+M		Connect second monitor		    Mod+Shift+G		Set gaps to default
-							    Mod+G		Remove gaps
-  		LAUNCH					    
-  Mod+Enter		Start terminal					  MODES
-  Mod+B			Start Luakit			    Mod+Shift+resize	Set mode to resize
-  Mod+Shift+B		Start Chromium			    Mod+Shift+C		Set mode to cmus
-  Mod+D			Start dmenu			    Mod+Shift+P		Set mode to MPD
-							    Escape or Space	Exit from any mode
-		WINDOWS						       
-  Mod+Shift+Q		Close window			    		RESIZE MODE
-  Mod+{ARROW}		Focus {ARROW}			    h or Left		Shrink width to 10px
-  Mod+Shift+{ARROW}	Move window {ARROW}		    j or Down		Grow height to 10px
-  Mod+H			Horizontal orientation		    k or Up		Shrink height to 10px
-  Mod+V			Vertical orientation		    l or Right		Grow width to 10px
-  Mod+F			Toggle fullscreen			    
-  Mod+W			Change layout to stacked	   	    CMUS OR MPD MODE 
-  Mod+W			Change layout to tabbed		    Right or n		Next track
-  Mod+Shift+Space	Toggle tiling/floating  	    Left  or u		Previous track
-  Mod+Space		Toggle focus to			    Space or p		Toggle pause
-			tiling/floating windows		    Up			Grow volume to 2
-  Mod+A			Focus parent container		    Down		Shrink volume to 2
-  Mod+1..0		Move to workspace		    R			Toggle repeat current
-  Mod+Shift+1..0	Move window to workspace	    a or h		Rewind -5 seconds 
-  Mod+T			Toggle borders for window	    d or l		Rewind +5 seconds
+		  \e[36mWM\e[0m							  \e[36mGAPS\e[0m
+  \e[31mMod+Shift+R\e[0m		Reload configs			    \e[31mMod+O\e[0m		Plus outer gaps 
+  \e[31mMod+Shift+E\e[0m		Exit				    \e[31mMod+Shift+O\e[0m		Minus outer gaps
+  \e[31mMod+Shift+W\e[0m		Toggle composite		    \e[31mMod+I\e[0m		Plus inner gaps
+			manager				    \e[31mMod+Shift+I\e[0m		Minus inner gaps
+  \e[31mMod+Shift+M\e[0m		Connect second monitor		    \e[31mMod+Shift+G\e[0m		Set gaps to default
+							    \e[31mMod+G\e[0m		Remove gaps
+  		\e[36mLAUNCH\e[0m					    
+  \e[31mMod+Enter\e[0m		Start terminal					  \e[36mMODES\e[0m
+  \e[31mMod+B\e[0m			Start Luakit			    \e[31mMod+Shift+resize\e[0m	Set mode to resize
+  \e[31mMod+Shift+B\e[0m		Start Chromium			    \e[31mMod+Shift+C\e[0m		Set mode to cmus
+  \e[31mMod+D\e[0m			Start dmenu			    \e[31mMod+Shift+P\e[0m		Set mode to MPD
+							    \e[31mEscape or Space\e[0m	Exit from any mode
+		\e[36mWINDOWS\e[0m						       
+  \e[31mMod+Shift+Q\e[0m		Close window			    		\e[36mRESIZE MODE\e[0m
+  \e[31mMod+{ARROW}\e[0m		Focus {ARROW}			    \e[31mh or Left\e[0m		Shrink width to 10px
+  \e[31mMod+Shift+{ARROW}\e[0m	Move window {ARROW}		    \e[31mj or Down\e[0m		Grow height to 10px
+  \e[31mMod+H\e[0m			Horizontal orientation		    \e[31mk or Up\e[0m		Shrink height to 10px
+  \e[31mMod+V\e[0m			Vertical orientation		    \e[31ml or Right\e[0m		Grow width to 10px
+  \e[31mMod+F\e[0m			Toggle fullscreen			    
+  \e[31mMod+W\e[0m			Change layout to stacked	   	     \e[36mCMUS OR MPD MODE\e[0m
+  \e[31mMod+W\e[0m			Change layout to tabbed		    \e[31mRight or n\e[0m		Next track
+  \e[31mMod+Shift+Space\e[0m	Toggle tiling/floating  	    \e[31mLeft  or u\e[0m		Previous track
+  \e[31mMod+Space\e[0m		Toggle focus to			    \e[31mSpace or p\e[0m		Toggle pause
+			tiling/floating windows		    \e[31mUp\e[0m			Grow volume to 2
+  \e[31mMod+A\e[0m			Focus parent container		    \e[31mDown\e[0m		Shrink volume to 2
+  \e[31mMod+1..0\e[0m		Move to workspace		    \e[31mr\e[0m			Toggle repeat current
+  \e[31mMod+Shift+1..0\e[0m	Move window to workspace	    \e[31ma or h\e[0m		Rewind -5 seconds 
+  \e[31mMod+T\e[0m			Toggle borders for window	    \e[31md or l\e[0m		Rewind +5 seconds
 
-		 TOOLS
-
-  Mod+S			Take a screenshot
-  Mod+U			Toggle Unified Remote Daemon
-  Mod+L			Lock
-  Mod+Shift+L		Lock and suspend
+		 \e[36mTOOLS\e[0m
+  \e[31mMod+S\e[0m			Take a screenshot
+  \e[31mMod+U\e[0m			Toggle Unified Remote Daemon
+  \e[31mMod+L\e[0m			Lock
+  \e[31mMod+Shift+L\e[0m		Lock and suspend

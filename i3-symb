@@ -1,2 +1,2 @@
 #!/bin/bash
-i3-input -f "" -F "exec --no-startup-id node ~/.config/i3/tab-name.js -s %s" -P 'Rename by symbol: '
+i3-input -f "xft:xos4 Terminus" -F "exec --no-startup-id node ~/.config/i3/tab-name.js -s %s" -P 'Rename by symbol: '

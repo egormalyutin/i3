@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [[ $1 == "1" ]]
+then
+	urxvt -e ~/.config/i3/widgets/mpd-wm &>> /dev/null
+	mpc | head -1
+else
+	mpc | head -1
+fi

@@ -403,5 +403,20 @@ bindsym $mod+l 		exec --no-startup-id ~/.config/i3/lock
 bindsym $mod+Shift+l 	exec --no-startup-id ~/.config/i3/lock && systemctl suspend 
 
 # Helpkeys
-bindsym $mod+F1 exec ~/.config/i3/hints/keys/toggle
-for_window [title="helpkeys-wm"] floating enable, move position 388 123, resize set 620 540; 
+bindsym $mod+F1 exec urxvt -e ~/.config/i3/hints/keys/helpkeys-wm, mode "widget"
+for_window [title="helpkeys-wm"] floating enable, move position 388 123, resize set 620 540;  
+bindsym $mod+F2 exec urxvt -e ~/.config/i3/widgets/cpu-wm, mode "widget"
+for_window [title="cpu-wm"] floating enable, move position 650 339, resize set 500 400;  
+bindsym $mod+F3 exec urxvt -e ~/.config/i3/widgets/free-wm, mode "widget"
+for_window [title="free-wm"] floating enable, move position 750 679, resize set 500 60;  
+bindsym $mod+F4 exec urxvt -e ~/.config/i3/widgets/df-wm, mode "widget"
+for_window [title="df-wm"] floating enable, move position 750 609, resize set 500 130;  
+bindsym $mod+F5 exec urxvt -e ~/.config/i3/widgets/alsa-wm, mode "widget"
+for_window [title="alsa-wm"] floating enable, move position 850 339, resize set 484 394;  
+bindsym $mod+F6 exec urxvt -e ~/.config/i3/widgets/mpd-wm, mode "widget"
+for_window [title="mpd-wm"] floating enable, move position 600 339, resize set 484 394;  
+
+# Widget mode
+mode "widget" {
+	bindsym Escape exec pkill urxvt, mode "default"
+}

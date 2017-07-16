@@ -1,0 +1,5 @@
+#!/bin/bash
+
+i3-msg mode widget &>> /dev/null
+free
+sleep infinity
