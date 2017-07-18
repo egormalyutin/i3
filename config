@@ -230,26 +230,26 @@ mode "cmus" {
         
 	# remote keys
 	
-	bindsym Right	exec --no-startup-id --no-startup-id cmus-remote -n
-	bindsym n	exec --no-startup-id --no-startup-id cmus-remote -n
+	bindsym Right	exec --no-startup-id --no-startup-id cmus-remote -n && pkill -RTMIN+2 i3blocks
+	bindsym n	exec --no-startup-id --no-startup-id cmus-remote -n && pkill -RTMIN+2 i3blocks
 
-	bindsym Left	exec --no-startup-id --no-startup-id cmus-remote -r
-	bindsym u	exec --no-startup-id --no-startup-id cmus-remote -r
+	bindsym Left	exec --no-startup-id --no-startup-id cmus-remote -r && pkill -RTMIN+2 i3blocks
+	bindsym u	exec --no-startup-id --no-startup-id cmus-remote -r && pkill -RTMIN+2 i3blocks
 
-	bindsym space	exec --no-startup-id --no-startup-id cmus-remote -u
-	bindsym p	exec --no-startup-id --no-startup-id cmus-remote -u
+	bindsym space	exec --no-startup-id --no-startup-id cmus-remote -u && pkill -RTMIN+2 i3blocks
+	bindsym p	exec --no-startup-id --no-startup-id cmus-remote -u && pkill -RTMIN+2 i3blocks
 
-	bindsym Up	exec --no-startup-id --no-startup-id ~/.config/i3/plus-volume 2
+	bindsym Up	exec --no-startup-id --no-startup-id ~/.config/i3/plus-volume 2 && pkill -RTMIN+2 i3blocks
 
-	bindsym Down	exec --no-startup-id --no-startup-id pactl set-sink-volume 0 -2%
+	bindsym Down	exec --no-startup-id --no-startup-id pactl set-sink-volume 0 -2% && pkill -RTMIN+2 i3blocks
 
-	bindsym r	exec --no-startup-id --no-startup-id cmus-remote -C "toggle repeat_current"
+	bindsym r	exec --no-startup-id --no-startup-id cmus-remote -C "toggle repeat_current" && pkill -RTMIN+2 i3blocks
 
-	bindsym a	exec --no-startup-id --no-startup-id cmus-remote -C "seek -5"
-	bindsym h	exec --no-startup-id --no-startup-id cmus-remote -C "seek -5"
+	bindsym a	exec --no-startup-id --no-startup-id cmus-remote -C "seek -5" && pkill -RTMIN+2 i3blocks
+	bindsym h	exec --no-startup-id --no-startup-id cmus-remote -C "seek -5" && pkill -RTMIN+2 i3blocks
 
-	bindsym d	exec --no-startup-id --no-startup-id cmus-remote -C "seek +5"
-	bindsym l	exec --no-startup-id --no-startup-id cmus-remote -C "seek +5"
+	bindsym d	exec --no-startup-id --no-startup-id cmus-remote -C "seek +5" && pkill -RTMIN+2 i3blocks
+	bindsym l	exec --no-startup-id --no-startup-id cmus-remote -C "seek +5" && pkill -RTMIN+2 i3blocks
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
@@ -264,26 +264,26 @@ mode "mpd" {
         
 	# remote keys
 	
-	bindsym Right	exec --no-startup-id --no-startup-id mpc next
-	bindsym n	exec --no-startup-id --no-startup-id mpc next
+	bindsym Right	exec --no-startup-id --no-startup-id mpc next && pkill -RTMIN+2 i3blocks
+	bindsym n	exec --no-startup-id --no-startup-id mpc next && pkill -RTMIN+2 i3blocks
 
-	bindsym Left	exec --no-startup-id --no-startup-id mpc prev
-	bindsym u	exec --no-startup-id --no-startup-id mpc prev
+	bindsym Left	exec --no-startup-id --no-startup-id mpc prev && pkill -RTMIN+2 i3blocks
+	bindsym u	exec --no-startup-id --no-startup-id mpc prev && pkill -RTMIN+2 i3blocks
 
-	bindsym space	exec --no-startup-id --no-startup-id mpc toggle
-	bindsym p	exec --no-startup-id --no-startup-id mpc toggle
+	bindsym space	exec --no-startup-id --no-startup-id mpc toggle && pkill -RTMIN+2 i3blocks
+	bindsym p	exec --no-startup-id --no-startup-id mpc toggle && pkill -RTMIN+2 i3blocks
 
-	bindsym Up	exec --no-startup-id --no-startup-id ~/.config/i3/plus-volume 2
+	bindsym Up	exec --no-startup-id --no-startup-id ~/.config/i3/plus-volume 2 && pkill -RTMIN+2 i3blocks
 
-	bindsym Down	exec --no-startup-id --no-startup-id pactl set-sink-volume 0 -2%
+	bindsym Down	exec --no-startup-id --no-startup-id pactl set-sink-volume 0 -2% && pkill -RTMIN+2 i3blocks
 
-	bindsym r	exec --no-startup-id --no-startup-id mpc single
+	bindsym r	exec --no-startup-id --no-startup-id mpc single && pkill -RTMIN+2 i3blocks
 
-	bindsym a	exec --no-startup-id --no-startup-id mpc seek -5
-	bindsym h	exec --no-startup-id --no-startup-id mpc seek -5
+	bindsym a	exec --no-startup-id --no-startup-id mpc seek -5 && pkill -RTMIN+2 i3blocks
+	bindsym h	exec --no-startup-id --no-startup-id mpc seek -5 && pkill -RTMIN+2 i3blocks
 
-	bindsym d	exec --no-startup-id --no-startup-id mpc seek +5
-	bindsym l	exec --no-startup-id --no-startup-id mpc seek +5
+	bindsym d	exec --no-startup-id --no-startup-id mpc seek +5 && pkill -RTMIN+2 i3blocks
+	bindsym l	exec --no-startup-id --no-startup-id mpc seek +5 && pkill -RTMIN+2 i3blocks
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
@@ -330,13 +330,13 @@ client.background       $transparent
 
 # Volume
 
-bindsym XF86AudioRaiseVolume exec --no-startup-id --no-startup-id ~/.config/i3/plus-volume 5
+bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.config/i3/plus-volume 5 && pkill -RTMIN+1 i3blocks
 
-bindsym XF86AudioLowerVolume exec --no-startup-id --no-startup-id pactl set-sink-volume 0 -5% 
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% && pkill -RTMIN+1 i3blocks 
 
-bindsym XF86AudioMute exec --no-startup-id --no-startup-id pactl set-sink-mute 0 toggle
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 
-bindsym XF86AudioMicMute exec --no-startup-id --no-startup-id pactl set-source-mute alsa_input.pci-0000_00_1b.0.analog-stereo to$
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute alsa_input.pci-0000_00_1b.0.analog-stereo to$
 
 
 
@@ -390,13 +390,13 @@ bindsym $mod+Shift+g  gaps inner current set $innerGaps; gaps outer current set 
 bindsym $mod+g 		gaps inner current set 0; gaps outer current set 0
 
 # Toggle Unified Remote Server daemon
-bindsym $mod+u exec --no-startup-id --no-startup-id ~/.config/i3/ur/cli/toggle
+bindsym $mod+u exec --no-startup-id --no-startup-id ~/.config/i3/ur/cli/toggle && pkill -RTMIN+3 i3blocks
 
 # Toggle split
 bindsym $mod+Shift+t split toggle
 
 # Rename this workspace by $c/i3-symb and $c/tab-name.js
-bindsym $mod+Shift+n exec --no-startup-id --no-startup-id $c/i3-symb
+bindsym $mod+shift+n exec --no-startup-id --no-startup-id $c/i3-symb
 
 # Lock
 bindsym $mod+l 		exec --no-startup-id ~/.config/i3/lock
@@ -405,15 +405,15 @@ bindsym $mod+Shift+l 	exec --no-startup-id ~/.config/i3/lock && systemctl suspen
 # Helpkeys
 bindsym $mod+F1 exec urxvt -e ~/.config/i3/hints/keys/helpkeys-wm, mode "widget"
 for_window [title="helpkeys-wm"] floating enable, move position 388 123, resize set 620 540;  
-bindsym $mod+F2 exec urxvt -e ~/.config/i3/widgets/cpu-wm, mode "widget"
+#bindsym $mod+F2 exec urxvt -e ~/.config/i3/widgets/cpu-wm, mode "widget"
 for_window [title="cpu-wm"] floating enable, move position 650 339, resize set 500 400;  
-bindsym $mod+F3 exec urxvt -e ~/.config/i3/widgets/free-wm, mode "widget"
+#bindsym $mod+F3 exec urxvt -e ~/.config/i3/widgets/free-wm, mode "widget"
 for_window [title="free-wm"] floating enable, move position 750 679, resize set 500 60;  
-bindsym $mod+F4 exec urxvt -e ~/.config/i3/widgets/df-wm, mode "widget"
+#bindsym $mod+F4 exec urxvt -e ~/.config/i3/widgets/df-wm, mode "widget"
 for_window [title="df-wm"] floating enable, move position 750 609, resize set 500 130;  
-bindsym $mod+F5 exec urxvt -e ~/.config/i3/widgets/alsa-wm, mode "widget"
+#bindsym $mod+F5 exec urxvt -e ~/.config/i3/widgets/alsa-wm, mode "widget"
 for_window [title="alsa-wm"] floating enable, move position 850 339, resize set 484 394;  
-bindsym $mod+F6 exec urxvt -e ~/.config/i3/widgets/mpd-wm, mode "widget"
+#bindsym $mod+F6 exec urxvt -e ~/.config/i3/widgets/mpd-wm, mode "widget"
 for_window [title="mpd-wm"] floating enable, move position 600 339, resize set 484 394;  
 
 # Widget mode

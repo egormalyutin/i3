@@ -23,11 +23,13 @@ label=
 #command=cd ~/.config/i3/mpd && ./mpd
 command=~/.config/i3/widgets/mpd $BLOCK_BUTTON
 interval=2
+signal=2
 color=#FFFFFF
 
 [playing]
 command=~/.config/i3/mpd/status $BLOCK_BUTTON
 interval=2
+signal=2
 color=#FFFFFF
 
 [separator]
@@ -35,6 +37,7 @@ color=#FFFFFF
 [remote]
 command=~/.config/i3/ur/cli/status $BLOCK_BUTTON
 interval=5
+signal=3
 color=#FFFFFF
 
 [separator]
@@ -73,7 +76,7 @@ color=#FFFFFF
 [volume]
 label= 
 command=~/.config/i3/widgets/alsa $BLOCK_BUTTON
-interval=1
+interval=once
 signal=1
 color=#FFFFFF
 
