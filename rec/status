@@ -1,0 +1,22 @@
+#!/bin/bash
+
+if [[ $1 == "1" ]]
+then
+	if [[ $(pgrep rec-start) ]]
+	then
+		pkill ffmpeg
+		pkill rec-start
+		rm ~/.config/i3/rec/text
+	else
+		i3-msg 'exec --no-startup-id ~/.config/i3/rec/rec-start &' &> /dev/null
+	fi
+fi
+
+e=$(cat ~/.config/i3/rec/text)
+
+if [[ $e == "" ]]
+then
+	echo  
+else
+	echo $e
+fi

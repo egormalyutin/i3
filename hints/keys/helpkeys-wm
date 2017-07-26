@@ -1,6 +1,1 @@
-#!/bin/bash
-
-raw="$(cat ~/.config/i3/hints/keys/text)"
-
-echo -e "$raw"
-sleep infinity
+/usr/bin/termite

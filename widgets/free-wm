@@ -1,5 +1,7 @@
 #!/bin/bash
 
+x=$(echo "$(cat ~/.config/i3/widget-x) - 250" | bc)
+i3-msg "[instance=free-wm] move position $x 679" &>> /dev/null
 i3-msg mode widget &>> /dev/null
 free
 sleep infinity

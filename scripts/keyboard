@@ -1,0 +1,3 @@
+#!/bin/bash
+
+xkb-switch -W | awk '{print toupper($0)}'

@@ -1,4 +1,6 @@
 #!/bin/bash
 
+x=$(echo "$(cat ~/.config/i3/widget-x) - 250" | bc)
+i3-msg "[instance=alsa-wm] move position $x 345" &>> /dev/null
 i3-msg mode widget &>> /dev/null
 alsamixer

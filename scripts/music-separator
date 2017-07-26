@@ -1,0 +1,6 @@
+#!/bin/bash
+
+if [[ $(mpc status | tail -n 1) != $(mpc status | tail -n 3) ]] 
+then 
+	echo '<'; 
+fi 2> /dev/null

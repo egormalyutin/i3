@@ -1,4 +1,6 @@
 #!/bin/bash
 
+x=$(echo "$(cat ~/.config/i3/widget-x) - 280" | bc)
+i3-msg "[instance=mpd-wm] move position $x 345" &>> /dev/null
 i3-msg mode widget &>> /dev/null
 ncmpcpp

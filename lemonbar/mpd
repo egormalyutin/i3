@@ -1,0 +1,9 @@
+#!/bin/bash
+
+main() {
+	s=$(mpc)
+
+	track = echo $s | head -1
+
+	
+}

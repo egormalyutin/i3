@@ -14,6 +14,16 @@ command=~/.config/i3/onlow
 interval=300
 color=#FFFFFF
 
+[CPU]
+label=
+command=~/.config/i3/widgets/cpu $BLOCK_BUTTON
+interval=2
+color=#FFFFFF
+
+[music-separator]
+command=~/.config/i3/scripts/music-separator
+interval=2
+
 [music]
 label=
 # Uncomment needed line / Раскомментирыйте нужную строку:
@@ -25,12 +35,23 @@ command=~/.config/i3/widgets/mpd $BLOCK_BUTTON
 interval=2
 signal=2
 color=#FFFFFF
+markup=pango
 
 [playing]
 command=~/.config/i3/mpd/status $BLOCK_BUTTON
 interval=2
 signal=2
 color=#FFFFFF
+min_width=
+
+[separator]
+
+[keymap]
+label= 
+command=~/.config/i3/scripts/echo
+interval=persist
+color=#FFFFFF
+min_width= US
 
 [separator]
 
@@ -38,14 +59,6 @@ color=#FFFFFF
 command=~/.config/i3/ur/cli/status $BLOCK_BUTTON
 interval=5
 signal=3
-color=#FFFFFF
-
-[separator]
-
-[CPU]
-label=
-command=~/.config/i3/widgets/cpu $BLOCK_BUTTON
-interval=2
 color=#FFFFFF
 
 [separator]
@@ -67,9 +80,18 @@ color=#FFFFFF
 [separator]
 
 [battery]
-command=~/.config/i3/scripts/battery
+command=acpi | sed 's/Charging, / /' | sed 's/Discharging, /⚡ /' | grep -o '[ ⚡] *1*[0-9]*%'
 interval=20
 color=#FFFFFF
+
+#[separator]
+
+#[rec]
+#command=~/.config/i3/rec/status $BLOCK_BUTTON
+#interval=once
+#signal=4
+#min_width= 
+#color=#FFFFFF
 
 [separator]
 
@@ -108,6 +130,6 @@ command=echo 〉
 interval=once
 
 [user]
-command=echo "$USER@$HOSTNAME "
+command=echo "  $USER@$HOSTNAME "
 interval=once
 color=#FFFFFF

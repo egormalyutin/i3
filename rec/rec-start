@@ -1,0 +1,20 @@
+#!/bin/bash
+
+cd ~/Видео/records
+
+num() {
+	echo "$1" > ~/.config/i3/rec/text
+	pkill -RTMIN+4 i3blocks
+	sleep 1
+}
+
+num 1
+num 2
+num 3
+num 4
+num 5
+
+echo   > ~/.config/i3/rec/text
+pkill -RTMIN+4 i3blocks
+
+ffmpeg -f x11grab -s 1366x768 -r 25 -i :0.0 -vcodec qtrle "screencast-$(date +"%m-%d-%Y").mov"

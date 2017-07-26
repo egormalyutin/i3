@@ -20,11 +20,11 @@ work = 0;
 exec('mpc status', function(err, stdout, stderr) {
   var track;
   if (stdout.match('playing')) {
-    str += '  ';
+    str += ' %{A:mpc toggle:}%{A} ';
     work = 1;
   }
   if (stdout.match('paused')) {
-    str += '  ';
+    str += ' %{A:mpc toggle:}%{A} ';
     work = 1;
   }
   if (work) {

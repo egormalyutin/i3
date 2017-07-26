@@ -1,0 +1,33 @@
+#!/bin/bash
+
+s_main() {
+	echo -e "MPD\nCMUS" | rofi -dmenu run -mesg "Main menu" -p "Remote system ~>"
+}
+
+s_mpd() {
+	echo -e "Toggle\nRewind -5\nRewind +5\nExit" | rofi -dmenu run -mesg "MPD" -p "Remote system ~>"
+}
+
+
+r_main() {
+	res=$(s_main)
+	if [[ $(echo $res | grep "MPD") ]]
+	then
+		r_mpd
+	fi
+}
+
+r_mpd() {
+	res=$(s_mpd)
+	if [[ $(echo $res | grep "Toggle") ]]
+	then
+		mpc toggle	
+		r_mpd
+	elif [[ $(echo $res | grep "Rewind -5") ]]
+	then
+		mpc seek -5
+		r_mpd
+	fi
+}
+
+r_main

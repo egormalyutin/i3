@@ -1,0 +1,4 @@
+#!/bin/bash
+
+~/.config/i3/scripts/cpu_usage_lemonbar
+echo "  "

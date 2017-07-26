@@ -17,6 +17,10 @@ images=
 torrent=
 
 paint=
+gimp=
+photoshop=
+graph=
+graphics=
 
 music=
 cmus=
@@ -124,6 +128,7 @@ information=
 star=
 
 record=
+rec=
 
 magic=
 

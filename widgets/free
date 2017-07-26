@@ -2,7 +2,8 @@
 
 if [[ $1 == "1" ]]
 then
-	urxvt -e ~/.config/i3/widgets/free-wm &>> /dev/null
+	echo $BLOCK_X > ~/.config/i3/widget-x
+	~/.config/i3/termites/free-wm -c ~/.config/termite/status -e ~/.config/i3/widgets/free-wm &>> /dev/null
 	~/.config/i3/scripts/memory | sed -n 2p
 else
 	~/.config/i3/scripts/memory | sed -n 2p

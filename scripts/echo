@@ -1,0 +1,10 @@
+#!/bin/bash
+
+
+xkb-switch | awk '{print toupper($0)}'
+
+while [[ 1 ]]
+do
+	xkb-switch -w
+	xkb-switch | awk '{print toupper($0)}'
+done
