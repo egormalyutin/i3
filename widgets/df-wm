@@ -3,5 +3,5 @@
 x=$(echo "$(cat ~/.config/i3/widget-x) - 250" | bc)
 i3-msg "[instance=df-wm] move position $x 609" &>> /dev/null
 i3-msg mode widget &>> /dev/null
-df
+df -h
 sleep infinity

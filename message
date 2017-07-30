@@ -1,0 +1,18 @@
+#!/bin/bash
+
+res=$(xrandr -q | grep '\*' | grep -o '[0-9]*x[0-9]*')
+resx=$(echo $res | grep -o '[0-9]*x' | grep -o '[0-9]*')
+resy=$(echo $res | grep -o 'x[0-9]*' | grep -o '[0-9]*')
+
+width=200
+height=40
+
+x=$(echo "($resx / 2) - ($width / 2)" | bc)
+y=$(echo "($resy / 2) - ($height / 2)" | bc)
+
+info() {
+	echo lol
+	sleep 10
+}
+
+info | dzen2 -geometry $width"x"$height -x $x -y $y -fn "Inconsolata"
