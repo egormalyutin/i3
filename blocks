@@ -48,8 +48,9 @@ min_width=
 
 [keymap]
 label= 
-command=~/.config/i3/scripts/echo
-interval=persist
+command=~/.config/i3/scripts/lang $BLOCK_BUTTON
+signal=6
+interval=once
 color=#FFFFFF
 min_width= US
 

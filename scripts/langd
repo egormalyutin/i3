@@ -1,0 +1,7 @@
+#!/bin/bash
+
+while [[ 1 ]]
+do
+	xkb-switch -w
+	pkill -RTMIN+6 i3blocks
+done
