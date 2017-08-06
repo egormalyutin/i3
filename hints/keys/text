@@ -5,15 +5,15 @@
 		  \e[36mWM\e[0m							  \e[36mGAPS\e[0m
   \e[31mMod+Shift+R\e[0m		Reload configs			    \e[31mMod+O\e[0m		Plus outer gaps 
   \e[31mMod+Shift+E\e[0m		Exit				    \e[31mMod+Shift+O\e[0m		Minus outer gaps
-  \e[31mMod+Shift+W\e[0m		Toggle composite		    \e[31mMod+I\e[0m		Plus inner gaps
-			manager				    \e[31mMod+Shift+I\e[0m		Minus inner gaps
+  \e[31mMod+Shift+W\e[0m		Toggle compositor		    \e[31mMod+I\e[0m		Plus inner gaps
+  \e[31mMod+Shift+Enter\e[0m	Create empty space	   	    \e[31mMod+Shift+I\e[0m		Minus inner gaps
   \e[31mMod+Shift+M\e[0m		Connect second monitor		    \e[31mMod+Shift+G\e[0m		Set gaps to default
 							    \e[31mMod+G\e[0m		Remove gaps
   		\e[36mLAUNCH\e[0m					    
   \e[31mMod+Enter\e[0m		Start terminal					  \e[36mMODES\e[0m
   \e[31mMod+B\e[0m			Start Luakit			    \e[31mMod+Shift+resize\e[0m	Set mode to resize
   \e[31mMod+Shift+B\e[0m		Start Chromium			    \e[31mMod+Shift+C\e[0m		Set mode to cmus
-  \e[31mMod+D\e[0m			Start dmenu			    \e[31mMod+Shift+P\e[0m		Set mode to MPD
+  \e[31mMod+D\e[0m			Start Rofi			    \e[31mMod+Shift+P\e[0m		Set mode to MPD
 							    \e[31mEscape or Space\e[0m	Exit from any mode
 		\e[36mWINDOWS\e[0m						       
   \e[31mMod+Shift+Q\e[0m		Close window			    		\e[36mRESIZE MODE\e[0m
@@ -22,7 +22,7 @@
   \e[31mMod+H\e[0m			Horizontal orientation		    \e[31mk or Up\e[0m		Shrink height to 10px
   \e[31mMod+V\e[0m			Vertical orientation		    \e[31ml or Right\e[0m		Grow width to 10px
   \e[31mMod+F\e[0m			Toggle fullscreen			    
-  \e[31mMod+W\e[0m			Change layout to stacked	   	     \e[36mCMUS OR MPD MODE\e[0m
+  \e[31mMod+E\e[0m			Change layout to stacked	   	     \e[36mCMUS OR MPD MODE\e[0m
   \e[31mMod+W\e[0m			Change layout to tabbed		    \e[31mRight or n\e[0m		Next track
   \e[31mMod+Shift+Space\e[0m	Toggle tiling/floating  	    \e[31mLeft  or u\e[0m		Previous track
   \e[31mMod+Space\e[0m		Toggle focus to			    \e[31mSpace or p\e[0m		Toggle pause

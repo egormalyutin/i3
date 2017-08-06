@@ -408,7 +408,7 @@ bindsym caps		exec i3-nagbar
 
 # Helpkeys
 bindsym $mod+F1 exec ~/.config/i3/hints/keys/helpkeys-wm -e ~/.config/i3/hints/keys/helpkeys -c ~/.config/termite/status, mode "widget"
-for_window [instance="helpkeys-wm"] floating enable, move position 388 123, resize set 620 540;  
+for_window [instance="helpkeys-wm"] floating enable, move position 388 123, resize set 620 530;  
 #bindsym $mod+F2 exec urxvt -e ~/.config/i3/widgets/cpu-wm, mode "widget"
 #for_window [instance="cpu-wm"] floating enable, move position 470 339, resize set 500 400;  
 #bindsym $mod+F3 exec urxvt -e ~/.config/i3/widgets/free-wm, mode "widget"
@@ -429,5 +429,5 @@ for_window [instance="mpd-wm"] floating enable, resize set 620 394;
 
 # Widget mode
 mode "widget" {
-	bindsym Escape exec kill $(pgrep '\-wm'), mode "default"
+	bindsym Escape exec --no-startup-id kill $(pgrep '\-wm'), mode "default"
 }
