@@ -56,7 +56,7 @@ yt=
 
 fix=
 
-git=
+git=
 
 github=
 
@@ -119,6 +119,9 @@ phone=
 
 qrcode=
 qr=
+
+build= 
+bullhorn= 
 
 question=
 
