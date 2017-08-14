@@ -76,6 +76,8 @@ film=
 save=
 
 settings=
+system=
+sys=
 
 telegram=
 
@@ -120,7 +122,9 @@ phone=
 qrcode=
 qr=
 
-build= 
+build=
+gavel=
+
 bullhorn= 
 
 question=
@@ -142,4 +146,9 @@ numofworkspace=$(i3-msg -t 'get_workspaces' | sed -e 's/{"num/\n{"num/g' | grep 
 
 symbolofworkspace=$(eval "echo $"$1"")
 
-i3-msg "rename workspace to \"$numofworkspace: $symbolofworkspace\""
+if [[ $symbolofworkspace == "" || $symbolofworkspace == "$" ]]
+then
+	notify-send "Invalid name of workspace" -u critical
+else
+	i3-msg "rename workspace to \"$numofworkspace: $symbolofworkspace\""
+fi
